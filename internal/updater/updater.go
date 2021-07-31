@@ -14,11 +14,11 @@ import (
 	"github.com/qdm12/golibs/logging"
 )
 
-type Updater interface {
+type ServerUpdater interface {
 	UpdateServers(ctx context.Context) (allServers models.AllServers, err error)
 }
 
-type updater struct {
+type Updater struct {
 	// configuration
 	options configuration.Updater
 
@@ -34,12 +34,12 @@ type updater struct {
 }
 
 func New(settings configuration.Updater, httpClient *http.Client,
-	currentServers models.AllServers, logger logging.Logger) Updater {
+	currentServers models.AllServers, logger logging.Logger) *Updater {
 	if settings.DNSAddress == "" {
 		settings.DNSAddress = "1.1.1.1"
 	}
 	unzipper := unzip.New(httpClient)
-	return &updater{
+	return &Updater{
 		logger:    logger,
 		timeNow:   time.Now,
 		presolver: resolver.NewParallelResolver(settings.DNSAddress),
@@ -51,7 +51,8 @@ func New(settings configuration.Updater, httpClient *http.Client,
 }
 
 //nolint:gocognit,gocyclo
-func (u *updater) UpdateServers(ctx context.Context) (allServers models.AllServers, err error) {
+func (u *Updater) UpdateServers(ctx context.Context) (
+	allServers models.AllServers, err error) {
 	if u.options.Cyberghost {
 		u.logger.Info("updating Cyberghost servers...")
 		if err := u.updateCyberghost(ctx); err != nil {

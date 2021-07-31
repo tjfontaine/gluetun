@@ -17,7 +17,7 @@ func newHandler(ctx context.Context, logger logging.Logger, logging bool,
 	buildInfo models.BuildInformation,
 	openvpnLooper openvpn.Looper,
 	unboundLooper dns.Looper,
-	updaterLooper updater.Looper,
+	updaterLooper updater.Loop,
 	publicIPLooper publicip.Looper,
 ) http.Handler {
 	handler := &handler{}

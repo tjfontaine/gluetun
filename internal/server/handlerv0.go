@@ -12,7 +12,7 @@ import (
 )
 
 func newHandlerV0(ctx context.Context, logger logging.Logger,
-	openvpn openvpn.Looper, dns dns.Looper, updater updater.Looper) http.Handler {
+	openvpn openvpn.Looper, dns dns.Looper, updater updater.Loop) http.Handler {
 	return &handlerV0{
 		ctx:     ctx,
 		logger:  logger,
@@ -27,7 +27,7 @@ type handlerV0 struct {
 	logger  logging.Logger
 	openvpn openvpn.Looper
 	dns     dns.Looper
-	updater updater.Looper
+	updater updater.Loop
 }
 
 func (h *handlerV0) ServeHTTP(w http.ResponseWriter, r *http.Request) {

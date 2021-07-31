@@ -25,7 +25,7 @@ import (
 	"github.com/qdm12/gluetun/internal/updater/providers/windscribe"
 )
 
-func (u *updater) updateCyberghost(ctx context.Context) (err error) {
+func (u *Updater) updateCyberghost(ctx context.Context) (err error) {
 	minServers := getMinServers(len(u.servers.Cyberghost.Servers))
 	servers, err := cyberghost.GetServers(ctx, u.presolver, minServers)
 	if err != nil {
@@ -41,7 +41,7 @@ func (u *updater) updateCyberghost(ctx context.Context) (err error) {
 	return nil
 }
 
-func (u *updater) updateFastestvpn(ctx context.Context) (err error) {
+func (u *Updater) updateFastestvpn(ctx context.Context) (err error) {
 	minServers := getMinServers(len(u.servers.Fastestvpn.Servers))
 	servers, warnings, err := fastestvpn.GetServers(
 		ctx, u.unzipper, u.presolver, minServers)
@@ -63,7 +63,7 @@ func (u *updater) updateFastestvpn(ctx context.Context) (err error) {
 	return nil
 }
 
-func (u *updater) updateHideMyAss(ctx context.Context) (err error) {
+func (u *Updater) updateHideMyAss(ctx context.Context) (err error) {
 	minServers := getMinServers(len(u.servers.HideMyAss.Servers))
 	servers, warnings, err := hidemyass.GetServers(
 		ctx, u.client, u.presolver, minServers)
@@ -85,7 +85,7 @@ func (u *updater) updateHideMyAss(ctx context.Context) (err error) {
 	return nil
 }
 
-func (u *updater) updateIpvanish(ctx context.Context) (err error) {
+func (u *Updater) updateIpvanish(ctx context.Context) (err error) {
 	minServers := getMinServers(len(u.servers.Ipvanish.Servers))
 	servers, warnings, err := ipvanish.GetServers(
 		ctx, u.unzipper, u.presolver, minServers)
@@ -107,7 +107,7 @@ func (u *updater) updateIpvanish(ctx context.Context) (err error) {
 	return nil
 }
 
-func (u *updater) updateIvpn(ctx context.Context) (err error) {
+func (u *Updater) updateIvpn(ctx context.Context) (err error) {
 	minServers := getMinServers(len(u.servers.Ivpn.Servers))
 	servers, warnings, err := ivpn.GetServers(
 		ctx, u.unzipper, u.presolver, minServers)
@@ -129,7 +129,7 @@ func (u *updater) updateIvpn(ctx context.Context) (err error) {
 	return nil
 }
 
-func (u *updater) updateMullvad(ctx context.Context) (err error) {
+func (u *Updater) updateMullvad(ctx context.Context) (err error) {
 	minServers := getMinServers(len(u.servers.Mullvad.Servers))
 	servers, err := mullvad.GetServers(ctx, u.client, minServers)
 	if err != nil {
@@ -145,7 +145,7 @@ func (u *updater) updateMullvad(ctx context.Context) (err error) {
 	return nil
 }
 
-func (u *updater) updateNordvpn(ctx context.Context) (err error) {
+func (u *Updater) updateNordvpn(ctx context.Context) (err error) {
 	minServers := getMinServers(len(u.servers.Nordvpn.Servers))
 	servers, warnings, err := nordvpn.GetServers(ctx, u.client, minServers)
 	if u.options.CLI {
@@ -166,7 +166,7 @@ func (u *updater) updateNordvpn(ctx context.Context) (err error) {
 	return nil
 }
 
-func (u *updater) updatePIA(ctx context.Context) (err error) {
+func (u *Updater) updatePIA(ctx context.Context) (err error) {
 	minServers := getMinServers(len(u.servers.Pia.Servers))
 	servers, err := pia.GetServers(ctx, u.client, minServers)
 	if err != nil {
@@ -182,7 +182,7 @@ func (u *updater) updatePIA(ctx context.Context) (err error) {
 	return nil
 }
 
-func (u *updater) updatePrivado(ctx context.Context) (err error) {
+func (u *Updater) updatePrivado(ctx context.Context) (err error) {
 	minServers := getMinServers(len(u.servers.Privado.Servers))
 	servers, warnings, err := privado.GetServers(
 		ctx, u.unzipper, u.client, u.presolver, minServers)
@@ -204,7 +204,7 @@ func (u *updater) updatePrivado(ctx context.Context) (err error) {
 	return nil
 }
 
-func (u *updater) updatePrivatevpn(ctx context.Context) (err error) {
+func (u *Updater) updatePrivatevpn(ctx context.Context) (err error) {
 	minServers := getMinServers(len(u.servers.Privatevpn.Servers))
 	servers, warnings, err := privatevpn.GetServers(
 		ctx, u.unzipper, u.presolver, minServers)
@@ -226,7 +226,7 @@ func (u *updater) updatePrivatevpn(ctx context.Context) (err error) {
 	return nil
 }
 
-func (u *updater) updateProtonvpn(ctx context.Context) (err error) {
+func (u *Updater) updateProtonvpn(ctx context.Context) (err error) {
 	minServers := getMinServers(len(u.servers.Privatevpn.Servers))
 	servers, warnings, err := protonvpn.GetServers(ctx, u.client, minServers)
 	if u.options.CLI {
@@ -247,7 +247,7 @@ func (u *updater) updateProtonvpn(ctx context.Context) (err error) {
 	return nil
 }
 
-func (u *updater) updatePurevpn(ctx context.Context) (err error) {
+func (u *Updater) updatePurevpn(ctx context.Context) (err error) {
 	minServers := getMinServers(len(u.servers.Purevpn.Servers))
 	servers, warnings, err := purevpn.GetServers(
 		ctx, u.client, u.unzipper, u.presolver, minServers)
@@ -269,7 +269,7 @@ func (u *updater) updatePurevpn(ctx context.Context) (err error) {
 	return nil
 }
 
-func (u *updater) updateSurfshark(ctx context.Context) (err error) {
+func (u *Updater) updateSurfshark(ctx context.Context) (err error) {
 	minServers := getMinServers(len(u.servers.Surfshark.Servers))
 	servers, warnings, err := surfshark.GetServers(
 		ctx, u.unzipper, u.presolver, minServers)
@@ -291,7 +291,7 @@ func (u *updater) updateSurfshark(ctx context.Context) (err error) {
 	return nil
 }
 
-func (u *updater) updateTorguard(ctx context.Context) (err error) {
+func (u *Updater) updateTorguard(ctx context.Context) (err error) {
 	minServers := getMinServers(len(u.servers.Torguard.Servers))
 	servers, warnings, err := torguard.GetServers(
 		ctx, u.unzipper, u.presolver, minServers)
@@ -313,7 +313,7 @@ func (u *updater) updateTorguard(ctx context.Context) (err error) {
 	return nil
 }
 
-func (u *updater) updateVPNUnlimited(ctx context.Context) (err error) {
+func (u *Updater) updateVPNUnlimited(ctx context.Context) (err error) {
 	minServers := getMinServers(len(u.servers.VPNUnlimited.Servers))
 	servers, warnings, err := vpnunlimited.GetServers(
 		ctx, u.unzipper, u.presolver, minServers)
@@ -335,7 +335,7 @@ func (u *updater) updateVPNUnlimited(ctx context.Context) (err error) {
 	return nil
 }
 
-func (u *updater) updateVyprvpn(ctx context.Context) (err error) {
+func (u *Updater) updateVyprvpn(ctx context.Context) (err error) {
 	minServers := getMinServers(len(u.servers.Vyprvpn.Servers))
 	servers, warnings, err := vyprvpn.GetServers(
 		ctx, u.unzipper, u.presolver, minServers)
@@ -357,7 +357,7 @@ func (u *updater) updateVyprvpn(ctx context.Context) (err error) {
 	return nil
 }
 
-func (u *updater) updateWindscribe(ctx context.Context) (err error) {
+func (u *Updater) updateWindscribe(ctx context.Context) (err error) {
 	minServers := getMinServers(len(u.servers.Windscribe.Servers))
 	servers, err := windscribe.GetServers(ctx, u.client, minServers)
 	if err != nil {

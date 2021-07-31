@@ -336,7 +336,7 @@ func _main(ctx context.Context, buildInfo models.BuildInformation,
 	// wait for restartOpenvpn
 	go openvpnLooper.Run(openvpnCtx, openvpnDone)
 
-	updaterLooper := updater.NewLooper(allSettings.Updater,
+	updaterLooper := updater.NewLoop(allSettings.Updater,
 		allServers, storage, openvpnLooper.SetServers, httpClient,
 		logger.NewChild(logging.Settings{Prefix: "updater: "}))
 	updaterHandler, updaterCtx, updaterDone := goshutdown.NewGoRoutineHandler(
@@ -448,7 +448,7 @@ func printVersions(ctx context.Context, logger logging.Logger,
 
 func routeReadyEvents(ctx context.Context, done chan<- struct{}, buildInfo models.BuildInformation,
 	tunnelReadyCh <-chan struct{},
-	unboundLooper dns.Looper, updaterLooper updater.Looper, publicIPLooper publicip.Looper,
+	unboundLooper dns.Looper, updaterLooper updater.Loop, publicIPLooper publicip.Looper,
 	routing routing.VPNGetter, logger logging.Logger, httpClient *http.Client,
 	versionInformation bool) {
 	defer close(done)

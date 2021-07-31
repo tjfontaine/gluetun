@@ -1,5 +1,7 @@
 # Maintenance
 
+- Get rid of events routing in main.go
+
 ## With caution
 
 - Remove duplicate `/gluetun` directory creation

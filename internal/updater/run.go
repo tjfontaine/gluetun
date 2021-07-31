@@ -1,11 +1,10 @@
-package publicip
+package updater
 
 import (
 	"context"
-	"net"
-	"os"
 
 	"github.com/qdm12/gluetun/internal/constants"
+	"github.com/qdm12/gluetun/internal/models"
 )
 
 type Runner interface {
@@ -22,20 +21,18 @@ func (l *Loop) Run(ctx context.Context, done chan<- struct{}) {
 	}
 
 	for ctx.Err() == nil {
-		getCtx, getCancel := context.WithCancel(ctx)
-		defer getCancel()
+		updateCtx, updateCancel := context.WithCancel(ctx)
 
-		ipCh := make(chan net.IP)
+		serversCh := make(chan models.AllServers)
 		errorCh := make(chan error)
+
 		go func() {
-			ip, err := l.fetcher.FetchPublicIP(getCtx)
+			servers, err := l.updater.UpdateServers(updateCtx)
 			if err != nil {
-				if getCtx.Err() == nil {
-					errorCh <- err
-				}
+				errorCh <- err
 				return
 			}
-			ipCh <- ip
+			serversCh <- servers
 		}()
 
 		if l.userTrigger {
@@ -50,51 +47,37 @@ func (l *Loop) Run(ctx context.Context, done chan<- struct{}) {
 		for stayHere {
 			select {
 			case <-ctx.Done():
-				getCancel()
-				close(errorCh) // bug?
-				filepath := l.state.GetSettings().IPFilepath
-				l.logger.Info("Removing ip file " + filepath)
-				if err := os.Remove(filepath); err != nil {
-					l.logger.Error(err.Error())
-				}
+				updateCancel()
+				<-errorCh
+				close(errorCh)
+				close(serversCh)
 				return
 			case <-l.start:
 				l.userTrigger = true
-				getCancel()
+				l.logger.Info("starting")
 				stayHere = false
 			case <-l.stop:
 				l.userTrigger = true
 				l.logger.Info("stopping")
-				getCancel()
+				updateCancel()
 				<-errorCh
 				l.stopped <- struct{}{}
-			case ip := <-ipCh:
-				getCancel()
-				l.state.SetPublicIP(ip)
-
-				message := "Public IP address is " + ip.String()
-				result, err := Info(ctx, l.client, ip)
-				if err != nil {
-					l.logger.Warn(err.Error())
-				} else {
-					message += " (" + result.Country + ", " + result.Region + ", " + result.City + ")"
-				}
-				l.logger.Info(message)
-
-				filepath := l.state.GetSettings().IPFilepath
-				err = persistPublicIP(filepath, ip.String(), l.puid, l.pgid)
-				if err != nil {
+			case servers := <-serversCh:
+				l.setAllServers(servers)
+				if err := l.storage.FlushToFile(servers); err != nil {
 					l.logger.Error(err.Error())
 				}
 				l.statusManager.SetStatus(constants.Completed)
+				l.logger.Info("Updated servers information")
 			case err := <-errorCh:
-				getCancel()
-				close(ipCh)
+				updateCancel()
+				close(serversCh)
+				close(errorCh)
 				l.statusManager.SetStatus(constants.Crashed)
 				l.logAndWait(ctx, err)
 				stayHere = false
 			}
 		}
-		close(errorCh)
+		updateCancel()
 	}
 }

@@ -38,6 +38,9 @@ type Loop struct {
 	fw          firewallConfigurer
 	routing     routing.VPNLocalGatewayIPGetter
 	portForward portforward.StartStopper
+	// dnsLoop     dns.RestartTickerRunner
+	// pubIPLoop   loopstate.Applier
+	// updaterLoop updater.Looper
 	// Other objects
 	logger      logging.Logger
 	client      *http.Client

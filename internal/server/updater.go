@@ -12,7 +12,7 @@ import (
 
 func newUpdaterHandler(
 	ctx context.Context,
-	looper updater.Looper,
+	looper updater.Loop,
 	logger logging.Logger) http.Handler {
 	return &updaterHandler{
 		ctx:    ctx,
@@ -23,7 +23,7 @@ func newUpdaterHandler(
 
 type updaterHandler struct {
 	ctx    context.Context
-	looper updater.Looper
+	looper updater.Loop
 	logger logging.Logger
 }
 
