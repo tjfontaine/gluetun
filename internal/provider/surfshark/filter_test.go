@@ -39,6 +39,19 @@ func Test_Surfshark_filterServers(t *testing.T) {
 				{Hostname: "c", UDP: true},
 			},
 		},
+		"filter OpenVPN out": {
+			selection: configuration.ServerSelection{
+				VPN: constants.Wireguard,
+			},
+			servers: []models.SurfsharkServer{
+				{OpenVPN: true, UDP: true, Hostname: "a"},
+				{OpenVPN: true, UDP: true, Wireguard: true, Hostname: "b"},
+				{OpenVPN: true, UDP: true, Hostname: "c"},
+			},
+			filtered: []models.SurfsharkServer{
+				{OpenVPN: true, UDP: true, Wireguard: true, Hostname: "b"},
+			},
+		},
 		"filter by region": {
 			selection: configuration.ServerSelection{
 				Regions: []string{"b"},
@@ -91,19 +104,31 @@ func Test_Surfshark_filterServers(t *testing.T) {
 				{Hostname: "b", UDP: true},
 			},
 		},
-		"filter by protocol": {
+		"filter by OpenVPN TCP": {
 			selection: configuration.ServerSelection{
-				OpenVPN: configuration.OpenVPNSelection{
-					TCP: true,
-				},
+				VPN:     constants.OpenVPN,
+				OpenVPN: configuration.OpenVPNSelection{TCP: true},
 			},
 			servers: []models.SurfsharkServer{
-				{Hostname: "a", UDP: true},
-				{Hostname: "b", UDP: true, TCP: true},
-				{Hostname: "c", UDP: true},
+				{OpenVPN: true, Hostname: "a"},
+				{OpenVPN: true, TCP: true, Hostname: "b"},
+				{OpenVPN: true, Hostname: "c"},
 			},
 			filtered: []models.SurfsharkServer{
-				{Hostname: "b", UDP: true, TCP: true},
+				{OpenVPN: true, TCP: true, Hostname: "b"},
+			},
+		},
+		"filter by OpenVPN UDP": {
+			selection: configuration.ServerSelection{
+				VPN: constants.OpenVPN,
+			},
+			servers: []models.SurfsharkServer{
+				{OpenVPN: true, Hostname: "a"},
+				{OpenVPN: true, UDP: true, Hostname: "b"},
+				{OpenVPN: true, Hostname: "c"},
+			},
+			filtered: []models.SurfsharkServer{
+				{OpenVPN: true, UDP: true, Hostname: "b"},
 			},
 		},
 		"filter by multihop only": {

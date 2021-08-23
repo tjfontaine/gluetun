@@ -2,19 +2,14 @@ package surfshark
 
 import (
 	"github.com/qdm12/gluetun/internal/configuration"
-	"github.com/qdm12/gluetun/internal/constants"
 	"github.com/qdm12/gluetun/internal/models"
 	"github.com/qdm12/gluetun/internal/provider/utils"
 )
 
 func (s *Surfshark) GetConnection(selection configuration.ServerSelection) (
 	connection models.Connection, err error) {
-	protocol := constants.UDP
-	var port uint16 = 1194
-	if selection.OpenVPN.TCP {
-		protocol = constants.TCP
-		port = 1443
-	}
+	protocol := utils.GetProtocol(selection)
+	port := getPort(selection)
 
 	servers, err := s.filterServers(selection)
 	if err != nil {
@@ -29,10 +24,21 @@ func (s *Surfshark) GetConnection(selection configuration.ServerSelection) (
 				IP:       IP,
 				Port:     port,
 				Protocol: protocol,
+				PubKey:   server.WgPubKey,
 			}
 			connections = append(connections, connection)
 		}
 	}
 
 	return utils.PickConnection(connections, selection, s.randSource)
+}
+
+func getPort(selection configuration.ServerSelection) (port uint16) {
+	const (
+		defaultOpenVPNTCP = 1443
+		defaultOpenVPNUDP = 1194
+		defaultWireguard  = 51820
+	)
+	return utils.GetPort(selection, defaultOpenVPNTCP,
+		defaultOpenVPNUDP, defaultWireguard)
 }
