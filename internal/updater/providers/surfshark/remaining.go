@@ -14,7 +14,8 @@ func getRemainingServers(hts hostToServer) {
 	for hostname, locationData := range hostnameToLocationLeft {
 		// we assume the server supports TCP and UDP
 		const tcp, udp = true, true
+		const wgPubKey = ""
 		hts.add(hostname, locationData.Region, locationData.Country,
-			locationData.City, locationData.RetroLoc, tcp, udp)
+			locationData.City, locationData.RetroLoc, wgPubKey, tcp, udp)
 	}
 }

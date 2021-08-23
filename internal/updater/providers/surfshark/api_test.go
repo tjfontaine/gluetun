@@ -35,23 +35,40 @@ func Test_addServersFromAPI(t *testing.T) {
 			responseStatus: http.StatusOK,
 			responseBody: ioutil.NopCloser(strings.NewReader(`[
 				{"connectionName":"host1","region":"region1","country":"country1","location":"location1"},
-				{"connectionName":"host2","region":"region2","country":"country1","location":"location2"}
+				{"connectionName":"host1","region":"region1","country":"country1","location":"location1","pubKey":"some key"},
+				{"connectionName":"host2","region":"region2","country":"country1","location":"location2","pubKey":"some key"},
+				{"connectionName":"host3","region":"region3","country":"country3","location":"location3"}
 			]`)),
 			expected: map[string]models.SurfsharkServer{
 				"existinghost": {Hostname: "existinghost"},
 				"host1": {
-					Region:   "region1",
-					Country:  "country1",
-					City:     "location1",
-					Hostname: "host1",
-					TCP:      true,
-					UDP:      true,
+					OpenVPN:   true,
+					Wireguard: true,
+					Region:    "region1",
+					Country:   "country1",
+					City:      "location1",
+					Hostname:  "host1",
+					TCP:       true,
+					UDP:       true,
+					WgPubKey:  "some key",
 				},
 				"host2": {
-					Region:   "region2",
-					Country:  "country1",
-					City:     "location2",
-					Hostname: "host2",
+					OpenVPN:   true,
+					Wireguard: true,
+					Region:    "region2",
+					Country:   "country1",
+					City:      "location2",
+					Hostname:  "host2",
+					TCP:       true,
+					UDP:       true,
+					WgPubKey:  "some key",
+				},
+				"host3": {
+					OpenVPN:  true,
+					Region:   "region3",
+					Country:  "country3",
+					City:     "location3",
+					Hostname: "host3",
 					TCP:      true,
 					UDP:      true,
 				}},
@@ -115,7 +132,7 @@ func Test_fetchAPI(t *testing.T) {
 			responseStatus: http.StatusOK,
 			responseBody: ioutil.NopCloser(strings.NewReader(`[
 				{"connectionName":"host1","region":"region1","country":"country1","location":"location1"},
-				{"connectionName":"host2","region":"region2","country":"country1","location":"location2"}
+				{"connectionName":"host2","region":"region2","country":"country1","location":"location2","pubKey":"some key"}
 			]`)),
 			data: []serverData{
 				{
@@ -129,6 +146,7 @@ func Test_fetchAPI(t *testing.T) {
 					Country:  "country1",
 					Location: "location2",
 					Host:     "host2",
+					PubKey:   "some key",
 				},
 			},
 		},

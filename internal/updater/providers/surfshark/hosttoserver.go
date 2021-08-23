@@ -8,15 +8,23 @@ import (
 
 type hostToServer map[string]models.SurfsharkServer
 
-func (hts hostToServer) add(host, region, country, city, retroLoc string, tcp, udp bool) {
+func (hts hostToServer) add(host, region, country, city, retroLoc,
+	pubKey string, tcp, udp bool) {
 	server, ok := hts[host]
 	if !ok {
+		server.OpenVPN = true
 		server.Hostname = host
 		server.Region = region
 		server.Country = country
 		server.City = city
 		server.RetroLoc = retroLoc
 	}
+
+	if pubKey != "" {
+		server.Wireguard = true
+		server.WgPubKey = pubKey
+	}
+
 	if tcp {
 		server.TCP = tcp
 	}

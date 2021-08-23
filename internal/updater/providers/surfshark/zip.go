@@ -63,8 +63,9 @@ func addOpenVPNServersFromZip(ctx context.Context,
 			continue
 		}
 
+		const wgPubKey = ""
 		hts.add(host, data.Region, data.Country, data.City,
-			data.RetroLoc, tcp, udp)
+			data.RetroLoc, wgPubKey, tcp, udp)
 	}
 
 	return warnings, nil

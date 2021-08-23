@@ -10,7 +10,7 @@ import (
 	"github.com/qdm12/gluetun/internal/constants"
 )
 
-// Note: no multi-hop and some servers are missing from their API.
+// Note: no multi-hop and some OpenVPN servers are missing from their API.
 func addServersFromAPI(ctx context.Context, client *http.Client,
 	hts hostToServer) (err error) {
 	data, err := fetchAPI(ctx, client)
@@ -25,7 +25,7 @@ func addServersFromAPI(ctx context.Context, client *http.Client,
 		locationData := hostToLocation[serverData.Host] // TODO remove in v4
 		retroLoc := locationData.RetroLoc               // empty string if the host has no retro-compatible region
 		hts.add(serverData.Host, serverData.Region, serverData.Country,
-			serverData.Location, retroLoc, tcp, udp)
+			serverData.Location, retroLoc, serverData.PubKey, tcp, udp)
 	}
 
 	return nil
@@ -41,6 +41,7 @@ type serverData struct {
 	Region   string `json:"region"`
 	Country  string `json:"country"`
 	Location string `json:"location"`
+	PubKey   string `json:"pubKey"`
 }
 
 func fetchAPI(ctx context.Context, client *http.Client) (
