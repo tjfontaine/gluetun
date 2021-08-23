@@ -106860,8 +106860,8 @@
     ]
   },
   "surfshark": {
-    "version": 3,
-    "timestamp": 1629736187,
+    "version": 4,
+    "timestamp": 1629741848,
     "servers": [
       {
         "region": "Asia Pacific",
@@ -106870,13 +106870,18 @@
         "retroloc": "Australia Adelaide",
         "hostname": "au-adl.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "J7N3UrHc71+LJkn8gsI9Ja8YcpTXT8fV789LLKnIXAY=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "45.248.79.21",
-          "45.248.79.35",
+          "45.248.79.29",
+          "45.248.79.37",
           "45.248.79.51",
-          "45.248.79.53"
+          "45.248.79.53",
+          "45.248.79.83",
+          "45.248.79.85"
         ]
       },
       {
@@ -106886,15 +106891,18 @@
         "retroloc": "Australia Brisbane",
         "hostname": "au-bne.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "Jo+U6dj+eAf8zdtoMqyYPmrJNVQj82mipH0mEDyfUXo=",
         "tcp": true,
         "udp": true,
         "ips": [
           "45.248.77.235",
-          "45.248.77.237",
           "144.48.39.13",
           "144.48.39.67",
           "144.48.39.69",
-          "144.48.39.109"
+          "144.48.39.85",
+          "144.48.39.125"
         ]
       },
       {
@@ -106904,15 +106912,19 @@
         "retroloc": "Australia Melbourne",
         "hostname": "au-mel.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "yYX9yLjHOSWVAsaujcIVWAxF9wYMmHupG1RtJk+u21o=",
         "tcp": true,
         "udp": true,
         "ips": [
           "103.192.80.139",
-          "103.192.80.149",
+          "103.192.80.147",
+          "103.192.80.221",
           "103.192.80.243",
-          "103.192.80.251",
+          "103.192.80.253",
+          "144.48.38.21",
           "144.48.38.139",
-          "144.48.38.141",
           "144.48.38.149"
         ]
       },
@@ -106923,13 +106935,18 @@
         "retroloc": "Australia Perth",
         "hostname": "au-per.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "oD0TqnE/ETIpvMO8DZObjdLVRf3jhzG7qV5GtM8/Yik=",
         "tcp": true,
         "udp": true,
         "ips": [
+          "45.248.78.43",
           "124.150.139.29",
-          "124.150.139.35",
+          "124.150.139.37",
+          "124.150.139.43",
           "124.150.139.125",
-          "124.150.139.179"
+          "124.150.139.181"
         ]
       },
       {
@@ -106939,17 +106956,18 @@
         "retroloc": "Australia Sydney",
         "hostname": "au-syd.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "Y5KM9kHdM0upMsIJWUQquOY1RgkWX69AHw/Dl5KyIk4=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "45.125.247.45",
-          "45.125.247.155",
+          "45.125.247.91",
           "45.125.247.157",
-          "45.125.247.195",
+          "45.248.76.173",
           "180.149.228.27",
-          "180.149.228.149",
-          "180.149.228.163",
-          "180.149.228.165"
+          "180.149.228.117",
+          "180.149.228.173"
         ]
       },
       {
@@ -106959,17 +106977,19 @@
         "retroloc": "Azerbaijan",
         "hostname": "az-bak.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "pvWYTFxIpqo25NGTertIIWnccS/sUQ6fIkqd8XJYzEI=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "62.212.239.43",
           "62.212.239.45",
-          "62.212.239.53",
+          "62.212.239.51",
           "62.212.239.67",
+          "94.20.154.59",
           "94.20.154.61",
-          "94.20.154.69",
-          "94.20.154.83",
-          "94.20.154.85"
+          "94.20.154.67",
+          "94.20.154.83"
         ]
       },
       {
@@ -106979,13 +106999,18 @@
         "retroloc": "Hong Kong",
         "hostname": "hk-hkg.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "JYHdktdtuM7inbtsxRKSDpnBVTWQ5+QLZ/cWWmf4VRg=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "84.17.37.154",
-          "84.17.37.160",
-          "84.17.57.71",
-          "212.102.42.209"
+          "84.17.37.158",
+          "84.17.57.68",
+          "212.102.42.194",
+          "212.102.42.199",
+          "212.102.42.204",
+          "212.102.42.206"
         ]
       },
       {
@@ -106995,15 +107020,17 @@
         "retroloc": "India Chennai",
         "hostname": "in-chn.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "JrG3Rz2L4BM0fdgzPQAeA4/uvcXMCVjaj7sQTPNoSTY=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "103.94.27.99",
-          "103.94.27.115",
+          "103.94.27.101",
           "103.94.27.117",
-          "103.94.27.229",
-          "103.108.117.116",
-          "103.108.117.118"
+          "103.94.27.227",
+          "103.108.117.118",
+          "103.108.117.151"
         ]
       },
       {
@@ -107013,6 +107040,9 @@
         "retroloc": "India Indore",
         "hostname": "in-idr.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "XDfGiUgJk9ViGpkK2b4NafmjSL/FsBdriEkOk2trCC0=",
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107027,19 +107057,21 @@
         "retroloc": "India Mumbai",
         "hostname": "in-mum.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "nZBv1nNW6HSvjybgCO9TNHI1pkX+C6GjyAHUtkJRjRI=",
         "tcp": true,
         "udp": true,
         "ips": [
           "103.156.50.97",
-          "103.156.50.99",
           "103.156.50.101",
-          "103.156.50.103",
-          "103.156.50.105",
-          "103.156.50.109",
-          "103.156.50.115",
-          "103.156.51.22",
-          "103.156.51.26",
-          "103.156.51.53"
+          "103.156.50.113",
+          "103.156.51.8",
+          "103.156.51.10",
+          "103.156.51.18",
+          "103.156.51.68",
+          "165.231.253.147",
+          "165.231.253.149"
         ]
       },
       {
@@ -107049,13 +107081,14 @@
         "retroloc": "Indonesia",
         "hostname": "id-jak.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "qyghLDfpfyparp0M52OVcmhKckayOvbRO2DDLkgJqyk=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "103.120.66.236",
-          "103.148.242.163",
-          "103.148.242.168",
-          "103.148.242.175"
+          "103.120.66.221",
+          "103.120.66.234"
         ]
       },
       {
@@ -107065,6 +107098,8 @@
         "retroloc": "Japan Tokyo st001",
         "hostname": "jp-tok-st001.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107078,6 +107113,8 @@
         "retroloc": "Japan Tokyo st002",
         "hostname": "jp-tok-st002.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107091,6 +107128,8 @@
         "retroloc": "Japan Tokyo st003",
         "hostname": "jp-tok-st003.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107104,6 +107143,8 @@
         "retroloc": "Japan Tokyo st004",
         "hostname": "jp-tok-st004.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107117,6 +107158,8 @@
         "retroloc": "Japan Tokyo st005",
         "hostname": "jp-tok-st005.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107130,6 +107173,8 @@
         "retroloc": "Japan Tokyo st006",
         "hostname": "jp-tok-st006.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107143,6 +107188,8 @@
         "retroloc": "Japan Tokyo st007",
         "hostname": "jp-tok-st007.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107156,6 +107203,8 @@
         "retroloc": "Japan Tokyo st008",
         "hostname": "jp-tok-st008.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107169,6 +107218,8 @@
         "retroloc": "Japan Tokyo st009",
         "hostname": "jp-tok-st009.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107182,6 +107233,8 @@
         "retroloc": "Japan Tokyo st010",
         "hostname": "jp-tok-st010.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107195,6 +107248,8 @@
         "retroloc": "Japan Tokyo st011",
         "hostname": "jp-tok-st011.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107208,6 +107263,8 @@
         "retroloc": "Japan Tokyo st012",
         "hostname": "jp-tok-st012.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107221,6 +107278,8 @@
         "retroloc": "Japan Tokyo st013",
         "hostname": "jp-tok-st013.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107234,14 +107293,17 @@
         "retroloc": "Japan Tokyo",
         "hostname": "jp-tok.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "YJSjrc/WWOjQUyUi4iYcHb7LsWWoCY+2fK8/8VtC/BY=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "84.17.34.26",
-          "84.17.34.46",
           "89.187.161.2",
-          "89.187.161.24",
-          "138.199.22.132"
+          "138.199.22.130",
+          "138.199.22.135",
+          "138.199.22.137",
+          "138.199.22.141"
         ]
       },
       {
@@ -107251,11 +107313,16 @@
         "retroloc": "Kazakhstan",
         "hostname": "kz-ura.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "c8SPrUWVMjSm3xdZRF4eg57sdEo2TFmBDVKP+A+quHM=",
         "tcp": true,
         "udp": true,
         "ips": [
           "5.189.202.9",
-          "5.189.202.14"
+          "5.189.202.11",
+          "5.189.202.14",
+          "5.189.202.16"
         ]
       },
       {
@@ -107265,13 +107332,18 @@
         "retroloc": "Malaysia",
         "hostname": "my-kul.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "AS84LXlJfgBwGHc70MvtGRxsMqNNucZ2pNOBayJUm04=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "42.0.30.150",
           "42.0.30.162",
-          "42.0.30.183",
-          "42.0.30.209"
+          "42.0.30.164",
+          "42.0.30.209",
+          "111.90.140.136",
+          "111.90.141.33",
+          "111.90.145.116"
         ]
       },
       {
@@ -107281,13 +107353,15 @@
         "retroloc": "New Zealand",
         "hostname": "nz-akl.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "xv8P19y0m9ojrLelCaPzGtaVv7tlPzLgZxvAD7lpYDg=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "180.149.231.3",
-          "180.149.231.45",
-          "180.149.231.67",
-          "180.149.231.69"
+          "180.149.231.13",
+          "180.149.231.119",
+          "180.149.231.165"
         ]
       },
       {
@@ -107297,12 +107371,14 @@
         "retroloc": "Philippines",
         "hostname": "ph-mnl.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "utXZy1ELBSQKa6s9/K/W4sV11Jod6sSLoikKqKRPyQs=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "45.134.224.5",
-          "45.134.224.15",
-          "45.134.224.29"
+          "45.134.224.26",
+          "45.134.224.31"
         ]
       },
       {
@@ -107312,6 +107388,8 @@
         "retroloc": "Singapore mp001",
         "hostname": "sg-sng-mp001.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107325,6 +107403,8 @@
         "retroloc": "Singapore st001",
         "hostname": "sg-sng-st001.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107338,6 +107418,8 @@
         "retroloc": "Singapore st002",
         "hostname": "sg-sng-st002.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107351,6 +107433,8 @@
         "retroloc": "Singapore st003",
         "hostname": "sg-sng-st003.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107364,6 +107448,8 @@
         "retroloc": "Singapore st004",
         "hostname": "sg-sng-st004.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107377,13 +107463,16 @@
         "retroloc": "Singapore",
         "hostname": "sg-sng.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "MGfgkhJsMVMTO33h1wr76+z6gQr/93VcGdClfbaPsnU=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "89.187.163.134",
-          "89.187.163.195",
-          "89.187.163.202",
-          "89.187.163.215"
+          "89.187.163.132",
+          "89.187.163.197",
+          "89.187.163.210",
+          "89.187.163.212"
         ]
       },
       {
@@ -107393,6 +107482,8 @@
         "retroloc": "Singapore Hong Kong",
         "hostname": "sg-hk.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107406,6 +107497,8 @@
         "retroloc": "Singapore in",
         "hostname": "sg-in.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107419,15 +107512,18 @@
         "retroloc": "Korea",
         "hostname": "kr-seo.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "bD/m2mdKxJXG2wTkLsmWpiW8xZwkDdrrrwC44auOhQg=",
         "tcp": true,
         "udp": true,
         "ips": [
+          "27.255.77.195",
           "45.130.137.10",
-          "45.130.137.26",
-          "45.130.137.38",
-          "61.14.210.232",
-          "61.14.210.239",
-          "103.249.31.26"
+          "45.130.137.14",
+          "45.130.137.40",
+          "45.130.137.48",
+          "103.249.31.28"
         ]
       },
       {
@@ -107437,17 +107533,18 @@
         "retroloc": "Taiwan",
         "hostname": "tw-tai.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "P0vaGUOUE7V5bbGOYY2WgQeZnTZEHvIr+dfebU7W4Ao=",
         "tcp": true,
         "udp": true,
         "ips": [
           "2.58.241.27",
-          "2.58.241.29",
-          "2.58.241.43",
           "2.58.241.45",
-          "2.58.241.131",
-          "2.58.241.133",
-          "2.58.242.45",
-          "103.152.151.21"
+          "2.58.241.163",
+          "103.152.151.3",
+          "103.152.151.19",
+          "103.152.151.85"
         ]
       },
       {
@@ -107457,11 +107554,14 @@
         "retroloc": "Thailand",
         "hostname": "th-bkk.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "OoFY46j/w4uQFyFu/OQ/h3x+ymJ1DJ4UR1fwGNxOxk0=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "27.131.164.91",
-          "27.131.164.99"
+          "27.131.164.179",
+          "27.131.164.181"
         ]
       },
       {
@@ -107471,10 +107571,13 @@
         "retroloc": "Vietnam",
         "hostname": "vn-hcm.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "Mioou38fh5H+3LWMpitLOWT3JaDGg2gXxqjl2eXkPFU=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "202.143.110.29"
+          "103.42.59.246"
         ]
       },
       {
@@ -107484,15 +107587,14 @@
         "retroloc": "Albania",
         "hostname": "al-tia.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "l8EOWPyzt/njrb74CADY4VOhns/TbUN6KFTbytHcFQw=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "31.171.152.197",
-          "31.171.153.19",
-          "31.171.154.163",
-          "31.171.154.221",
-          "31.171.155.69",
-          "31.171.155.85"
+          "31.171.153.83",
+          "31.171.155.67"
         ]
       },
       {
@@ -107502,11 +107604,16 @@
         "retroloc": "Austria",
         "hostname": "at-vie.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "dPZe8Jq3Hu0k07MDk+Y4+AS2XHSLYalyg91TSFXRYEA=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "5.253.207.51",
-          "146.70.28.93"
+          "37.19.195.66",
+          "37.19.195.68",
+          "37.120.212.75",
+          "37.120.212.133"
         ]
       },
       {
@@ -107516,21 +107623,22 @@
         "retroloc": "Belgium",
         "hostname": "be-bru.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "9wZOjtwuKEc0GBcvc3xJQ4Kjo8G3EMXu6zJRzbanOjc=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "5.253.205.181",
-          "5.253.205.213",
           "5.253.205.229",
-          "37.120.143.117",
-          "37.120.236.147",
-          "89.249.73.197",
-          "91.90.123.125",
-          "91.90.123.149",
-          "91.90.123.189",
-          "91.90.123.227",
-          "185.104.186.75",
-          "194.110.115.91"
+          "37.120.236.139",
+          "91.90.123.123",
+          "91.90.123.133",
+          "91.90.123.163",
+          "91.90.123.165",
+          "91.90.123.181",
+          "91.90.123.203",
+          "194.110.115.91",
+          "194.110.115.245"
         ]
       },
       {
@@ -107540,15 +107648,20 @@
         "retroloc": "Bosnia and Herzegovina",
         "hostname": "ba-sjj.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "hsm/ps/uxcsVNzT3OmV/l7ZWv+TRIS+IM+N6/nTymkw=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "185.99.3.66",
-          "185.99.3.98",
-          "185.99.3.100",
+          "185.99.3.94",
+          "185.99.3.102",
           "185.99.3.108",
           "185.99.3.146",
-          "185.99.3.207"
+          "185.99.3.205",
+          "185.99.3.207",
+          "185.164.34.250",
+          "185.212.111.59"
         ]
       },
       {
@@ -107558,13 +107671,15 @@
         "retroloc": "Bulgaria",
         "hostname": "bg-sof.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "LQFiCiZcPEoYasKRLbCfXp2fYYsj8wiMr/L9u6hYqSo=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "37.120.152.35",
           "37.120.152.37",
-          "217.138.202.19",
-          "217.138.202.21"
+          "37.120.152.197",
+          "217.138.202.19"
         ]
       },
       {
@@ -107574,11 +107689,16 @@
         "retroloc": "Croatia",
         "hostname": "hr-zag.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "nIQmC5T4H0HX4yA2u/Z5rrbLQDAOLA+kFCdt8S94xXg=",
         "tcp": true,
         "udp": true,
         "ips": [
+          "85.10.51.91",
           "89.164.99.109",
-          "176.222.34.130"
+          "176.222.34.130",
+          "176.222.34.132"
         ]
       },
       {
@@ -107588,13 +107708,22 @@
         "retroloc": "Cyprus",
         "hostname": "cy-nic.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "kEAQgNChxGgrzoKPpCPFJKh0L1/5rXIq08KSY4g26zY=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "185.191.206.99",
-          "185.191.206.101",
+          "195.47.194.36",
+          "195.47.194.42",
+          "195.47.194.54",
           "195.47.194.83",
-          "195.47.194.97"
+          "195.47.194.85",
+          "195.47.194.87",
+          "195.47.194.89",
+          "195.47.194.95",
+          "195.47.194.97",
+          "195.47.194.101"
         ]
       },
       {
@@ -107604,15 +107733,20 @@
         "retroloc": "Czech Republic",
         "hostname": "cz-prg.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "c1bfP+OBTj6WUe8NDH8d6nDTwpQicopfdkHFx3BIaSk=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "185.152.64.151",
-          "185.180.14.147",
-          "193.9.112.183",
-          "193.9.112.199",
-          "217.138.199.179",
-          "217.138.220.179",
+          "193.9.112.195",
+          "193.9.112.197",
+          "217.138.220.125",
+          "217.138.220.133",
+          "217.138.220.141",
+          "217.138.220.147",
+          "217.138.220.165",
+          "217.138.220.173",
           "217.138.220.181",
           "217.138.220.189"
         ]
@@ -107624,17 +107758,16 @@
         "retroloc": "Denmark",
         "hostname": "dk-cph.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "peDjRPEdHHmo0hGootZ9f+MQCEXmziFkLhMTl2PeXRM=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "37.120.194.91",
-          "37.120.194.125",
-          "193.29.107.117",
-          "193.29.107.123",
-          "193.29.107.173",
-          "193.29.107.187",
-          "193.29.107.211",
-          "193.29.107.221"
+          "37.120.194.99",
+          "37.120.194.107",
+          "193.29.107.163",
+          "193.29.107.213"
         ]
       },
       {
@@ -107644,13 +107777,20 @@
         "retroloc": "Estonia",
         "hostname": "ee-tll.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "CsdrT+WfcMRPhrOWgZeHj9DQiQtJfYFci94K5ztjr2E=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "165.231.163.5",
-          "185.174.159.51",
-          "185.174.159.131",
-          "185.174.159.136"
+          "165.231.163.23",
+          "185.174.159.59",
+          "185.174.159.61",
+          "185.174.159.67",
+          "185.174.159.69",
+          "185.174.159.133",
+          "185.174.159.136",
+          "185.174.159.138"
         ]
       },
       {
@@ -107660,15 +107800,16 @@
         "retroloc": "Finland",
         "hostname": "fi-hel.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "+nv/Z8I2VS0eRdZwkpQW3U9RmsboTz2MUF94jVg5w10=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "196.196.203.83",
-          "196.196.203.85",
-          "196.196.203.107",
-          "196.244.191.37",
-          "196.244.191.165",
-          "196.244.191.179"
+          "196.196.203.99",
+          "196.196.203.109",
+          "196.244.191.43",
+          "196.244.191.91"
         ]
       },
       {
@@ -107678,13 +107819,18 @@
         "retroloc": "France Bordeaux",
         "hostname": "fr-bod.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "ArE5eVIEOPellzFlGK/oOcHCGnB+AAv0Un4C100COmw=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "185.108.106.72",
-          "185.108.106.89",
-          "185.108.106.142",
-          "185.108.106.158"
+          "185.108.106.51",
+          "185.108.106.102",
+          "185.108.106.164",
+          "185.108.106.169",
+          "185.108.106.176",
+          "185.108.106.180"
         ]
       },
       {
@@ -107694,15 +107840,26 @@
         "retroloc": "France Marseilles",
         "hostname": "fr-mrs.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "QYa3ZFLwWAHKiJzOcbM73K7KBE0tdJYuirbGb+uH0H0=",
         "tcp": true,
         "udp": true,
         "ips": [
+          "138.199.16.140",
+          "138.199.16.142",
+          "138.199.16.145",
+          "185.166.84.3",
           "185.166.84.5",
           "185.166.84.17",
-          "185.166.84.33",
-          "185.166.84.36",
-          "185.166.84.87",
-          "185.166.84.93"
+          "185.166.84.19",
+          "185.166.84.21",
+          "185.166.84.55",
+          "185.166.84.65",
+          "185.166.84.73",
+          "185.166.84.81",
+          "185.166.84.83",
+          "185.166.84.85"
         ]
       },
       {
@@ -107712,17 +107869,18 @@
         "retroloc": "France Paris",
         "hostname": "fr-par.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "AsvLuvKKADdc67aA/vHA3vb61S6YnGGx2Pd4aP4wal8=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "45.89.174.93",
-          "84.17.43.178",
-          "143.244.56.230",
-          "143.244.57.87",
-          "143.244.57.110",
-          "143.244.57.119",
-          "185.246.211.103",
-          "217.138.207.251"
+          "45.83.90.181",
+          "84.247.51.235",
+          "84.247.51.237",
+          "84.247.51.245",
+          "143.244.56.228",
+          "143.244.57.75"
         ]
       },
       {
@@ -107732,6 +107890,8 @@
         "retroloc": "France Sweden",
         "hostname": "fr-se.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107745,11 +107905,16 @@
         "retroloc": "",
         "hostname": "ge-tbs.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "L79E4IoaVZBXOyoMM82TvUIbiKlloRbUnT8R2Cl3PVM=",
         "tcp": true,
         "udp": true,
         "ips": [
           "91.239.207.224",
-          "91.239.207.226"
+          "91.239.207.226",
+          "91.239.207.232",
+          "91.239.207.234"
         ]
       },
       {
@@ -107759,18 +107924,19 @@
         "retroloc": "Germany Berlin",
         "hostname": "de-ber.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "d3ldwEjnFcbLwD1o8uC5xC3DaSNek8DGeTpOb/h/IE4=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "37.120.217.147",
-          "89.36.76.67",
-          "152.89.163.247",
-          "193.29.106.13",
-          "193.29.106.21",
+          "37.120.217.179",
+          "89.36.76.51",
+          "193.29.106.27",
           "193.29.106.45",
-          "193.29.106.75",
-          "193.29.106.77",
-          "193.29.106.179",
+          "193.29.106.149",
+          "193.29.106.157",
+          "217.138.216.219",
           "217.138.216.251"
         ]
       },
@@ -107781,6 +107947,8 @@
         "retroloc": "Germany Frankfurt mp001",
         "hostname": "de-fra-mp001.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107794,6 +107962,8 @@
         "retroloc": "Germany Frankfurt am Main st001",
         "hostname": "de-fra-st001.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107807,6 +107977,8 @@
         "retroloc": "Germany Frankfurt am Main st002",
         "hostname": "de-fra-st002.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107820,6 +107992,8 @@
         "retroloc": "Germany Frankfurt am Main st003",
         "hostname": "de-fra-st003.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107833,6 +108007,8 @@
         "retroloc": "Germany Frankfurt am Main st004",
         "hostname": "de-fra-st004.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107846,6 +108022,8 @@
         "retroloc": "Germany Frankfurt am Main st005",
         "hostname": "de-fra-st005.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107859,17 +108037,19 @@
         "retroloc": "Germany Frankfurt am Main",
         "hostname": "de-fra.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "fJDA+OA6jzQxfRcoHfC27xz7m3C8/590fRjpntzSpGo=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "138.199.19.139",
-          "138.199.19.162",
-          "138.199.19.164",
-          "138.199.19.169",
-          "138.199.19.177",
-          "156.146.33.69",
-          "185.59.220.144",
-          "185.102.219.47"
+          "37.120.197.13",
+          "89.187.169.104",
+          "156.146.33.77",
+          "156.146.33.79",
+          "185.93.180.101",
+          "185.102.219.6",
+          "185.102.219.49"
         ]
       },
       {
@@ -107879,6 +108059,8 @@
         "retroloc": "Germany Singapour",
         "hostname": "de-sg.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107892,6 +108074,8 @@
         "retroloc": "Germany UK",
         "hostname": "de-uk.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107905,17 +108089,18 @@
         "retroloc": "Greece",
         "hostname": "gr-ath.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "bXnjQGLhuauvBMg51YIAhwX40YqNL2ImyEub5DpHaBk=",
         "tcp": true,
         "udp": true,
         "ips": [
           "91.240.243.19",
-          "91.240.243.24",
-          "194.150.167.34",
+          "194.150.167.28",
           "194.150.167.38",
-          "194.150.167.46",
-          "194.150.167.48",
-          "194.150.167.50",
-          "194.150.167.54"
+          "194.150.167.42",
+          "194.150.167.44",
+          "194.150.167.52"
         ]
       },
       {
@@ -107925,15 +108110,16 @@
         "retroloc": "Hungary",
         "hostname": "hu-bud.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "Pk3+iZNP0uWkDTSmEHlUeSA3WyiFXLXgYgAQ5wNyIBk=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "37.120.144.149",
-          "37.120.144.151",
           "37.120.144.195",
           "37.120.144.211",
-          "185.252.223.83",
-          "185.252.223.85"
+          "37.120.144.213",
+          "185.252.223.83"
         ]
       },
       {
@@ -107943,13 +108129,16 @@
         "retroloc": "Iceland",
         "hostname": "is-rkv.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "d0m2sIa0JGcxCBvoWDU77SjmPoiWI/oKoX1TL2f2fTA=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "45.133.193.115",
-          "45.133.193.117",
-          "45.133.193.197",
-          "45.133.193.219"
+          "45.133.193.107",
+          "45.133.193.109",
+          "45.133.193.211",
+          "45.133.193.213"
         ]
       },
       {
@@ -107959,6 +108148,8 @@
         "retroloc": "India UK",
         "hostname": "in-uk.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -107972,17 +108163,26 @@
         "retroloc": "Ireland",
         "hostname": "ie-dub.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "TjYxodFNdGlefxnWqe9vWWJHnz3meYWWhiIJyU8rgg8=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "5.157.13.67",
-          "5.157.13.69",
-          "5.157.13.91",
-          "5.157.13.133",
+          "5.157.13.53",
+          "5.157.13.93",
+          "5.157.13.99",
+          "37.120.235.61",
+          "37.120.235.75",
           "37.120.235.77",
           "37.120.235.83",
-          "37.120.235.213",
-          "217.138.222.53"
+          "37.120.235.219",
+          "37.120.235.237",
+          "146.70.48.51",
+          "185.252.222.109",
+          "185.252.222.115",
+          "217.138.222.43",
+          "217.138.222.45"
         ]
       },
       {
@@ -107992,16 +108192,22 @@
         "retroloc": "Italy Milan",
         "hostname": "it-mil.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "vIMHzH5FHdVkrhOOc0u/FySVhumaLC3XUk39Wk34LnE=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "37.120.201.19",
-          "84.17.58.152",
-          "84.17.58.156",
-          "212.102.54.137",
-          "212.102.54.170",
-          "212.102.54.177",
-          "212.102.54.180"
+          "84.17.58.134",
+          "84.17.58.159",
+          "84.17.58.161",
+          "84.17.58.195",
+          "84.17.58.202",
+          "185.128.27.35",
+          "185.128.27.37",
+          "212.102.54.150",
+          "212.102.54.162",
+          "212.102.55.68"
         ]
       },
       {
@@ -108011,12 +108217,19 @@
         "retroloc": "Italy Rome",
         "hostname": "it-rom.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "fqxSeDr7n249iywruwLMwkV3r36svPT1tLf9TJOTFAw=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "185.217.71.51",
+          "37.120.207.3",
+          "37.120.207.5",
+          "82.102.26.53",
+          "87.101.94.211",
+          "185.217.71.53",
           "185.217.71.187",
-          "185.217.71.211",
+          "185.217.71.235",
           "185.217.71.237"
         ]
       },
@@ -108027,14 +108240,21 @@
         "retroloc": "Latvia",
         "hostname": "lv-rig.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "EmghYf9rIpwOQ0uIjIxgCXs/WwHJthNvPIv5iKseE3A=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "91.203.69.146",
           "91.203.69.176",
           "91.203.69.178",
+          "188.92.78.135",
+          "188.92.78.140",
           "188.92.78.142",
-          "188.92.78.147",
+          "188.92.78.145",
+          "188.92.78.152",
+          "188.92.78.203",
+          "188.92.78.205",
           "188.92.78.210"
         ]
       },
@@ -108045,25 +108265,19 @@
         "retroloc": "Luxembourg",
         "hostname": "lu-ste.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "68JVBL/M2AYQ9gYHtcpmZ6Pl+ayhJjTL2sr6Ej1VEFg=",
         "tcp": true,
         "udp": true,
         "ips": [
           "185.153.151.80",
-          "185.153.151.91",
           "185.153.151.94",
-          "185.153.151.114",
           "185.153.151.116",
-          "185.153.151.122",
-          "185.153.151.124",
-          "185.153.151.134",
-          "185.153.151.136",
-          "185.153.151.142",
-          "185.153.151.167",
+          "185.153.151.164",
+          "185.153.151.165",
           "185.153.151.171",
-          "185.153.151.173",
-          "185.153.151.179",
-          "185.153.151.183",
-          "185.153.151.191"
+          "185.153.151.173"
         ]
       },
       {
@@ -108073,6 +108287,9 @@
         "retroloc": "",
         "hostname": "mt-mla.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "c9EuAnWYvGUyFrzrV70Fph0onkFv2xe3Bc0gTCFuKRw=",
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108087,11 +108304,16 @@
         "retroloc": "Moldova",
         "hostname": "md-chi.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "4Exn42t337sxoBzYHxgmDBNq+AhTYz6nvEj98TWY50Y=",
         "tcp": true,
         "udp": true,
         "ips": [
           "178.175.128.235",
-          "178.175.128.237"
+          "178.175.128.237",
+          "194.33.40.112",
+          "194.33.40.114"
         ]
       },
       {
@@ -108101,6 +108323,8 @@
         "retroloc": "Netherlands Amsterdam mp001",
         "hostname": "nl-ams-mp001.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108114,6 +108338,8 @@
         "retroloc": "Netherlands Amsterdam st001",
         "hostname": "nl-ams-st001.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108127,13 +108353,24 @@
         "retroloc": "Netherlands Amsterdam",
         "hostname": "nl-ams.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "Lxg3jAOKcBA9tGBtB6vEWMFl5LUEB6AwOpuniYn1cig=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "89.46.223.68",
-          "89.46.223.237",
-          "143.244.42.86",
-          "195.181.172.39"
+          "81.19.208.66",
+          "81.19.208.80",
+          "81.19.209.55",
+          "89.46.223.58",
+          "89.46.223.84",
+          "89.46.223.190",
+          "143.244.42.76",
+          "143.244.42.91",
+          "195.181.172.37",
+          "212.102.35.201",
+          "212.102.35.214",
+          "212.102.35.218"
         ]
       },
       {
@@ -108143,9 +108380,14 @@
         "retroloc": "North Macedonia",
         "hostname": "mk-skp.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "dZNq48noPkey9rwSbAU+masbafpDSaAmtAMaP+gzLxA=",
         "tcp": true,
         "udp": true,
         "ips": [
+          "185.225.28.67",
+          "185.225.28.69",
           "185.225.28.91",
           "185.225.28.107",
           "185.225.28.245"
@@ -108158,13 +108400,20 @@
         "retroloc": "Norway",
         "hostname": "no-osl.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "pXfZi2vsdd88qrnqh+bwqHG4IYD42pj3T1wCm3PIGmw=",
         "tcp": true,
         "udp": true,
         "ips": [
           "45.12.223.197",
-          "45.12.223.213",
+          "84.247.50.27",
+          "84.247.50.69",
+          "91.219.215.19",
           "91.219.215.21",
-          "91.219.215.85"
+          "91.219.215.37",
+          "91.219.215.67",
+          "91.219.215.83"
         ]
       },
       {
@@ -108174,13 +108423,20 @@
         "retroloc": "Poland Gdansk",
         "hostname": "pl-gdn.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "4lZhg/fKDCRLjvULGntx21qfebzQv5TJjZ1pc82sUgc=",
         "tcp": true,
         "udp": true,
         "ips": [
+          "5.133.8.115",
+          "5.133.8.117",
+          "5.187.49.149",
+          "5.187.49.187",
+          "5.187.53.55",
           "37.28.156.115",
           "37.28.156.117",
-          "178.255.44.68",
-          "178.255.45.187"
+          "178.255.45.189"
         ]
       },
       {
@@ -108190,13 +108446,16 @@
         "retroloc": "Poland Warsaw",
         "hostname": "pl-waw.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "vBa3HK7QXietG64rHRLm085VMS2cAX2paeAaphB/SEU=",
         "tcp": true,
         "udp": true,
         "ips": [
           "5.253.206.71",
-          "138.199.17.132",
+          "185.246.208.72",
           "185.246.208.77",
-          "185.246.208.107"
+          "185.246.208.182"
         ]
       },
       {
@@ -108206,14 +108465,22 @@
         "retroloc": "Portugal Lisbon",
         "hostname": "pt-lis.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "JgYlpt7jFh0FV2QO0QQ3yFfsnqikUq977V3cObFGTQ4=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "5.154.174.181",
-          "91.205.230.131",
-          "91.205.230.150",
-          "91.205.230.158",
-          "91.205.230.160"
+          "5.154.174.101",
+          "5.154.174.189",
+          "5.154.174.213",
+          "5.154.174.221",
+          "91.205.230.146",
+          "91.205.230.148",
+          "91.205.230.154",
+          "91.205.230.170",
+          "91.205.230.176",
+          "91.250.240.146"
         ]
       },
       {
@@ -108223,13 +108490,16 @@
         "retroloc": "Portugal Porto",
         "hostname": "pt-opo.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "F24iHyEt6YSSaUry/nQAfIEOwXncH0RHUtkte0znvkE=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "194.39.127.153",
-          "194.39.127.181",
-          "194.39.127.193",
-          "194.39.127.242"
+          "194.39.127.171",
+          "194.39.127.173",
+          "194.39.127.191",
+          "194.39.127.231"
         ]
       },
       {
@@ -108239,17 +108509,18 @@
         "retroloc": "Romania",
         "hostname": "ro-buc.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "uRT3uSAUwvm7Rp+s3n5V9JibsKHKAZ/8+SU3psG8QxI=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "37.120.206.237",
           "45.89.175.51",
           "45.89.175.53",
-          "185.102.217.155",
-          "185.102.217.165",
+          "45.89.175.55",
           "185.102.217.167",
           "185.102.217.169",
-          "217.148.143.219"
+          "185.102.217.196"
         ]
       },
       {
@@ -108259,12 +108530,15 @@
         "retroloc": "Russia Moscow",
         "hostname": "ru-mos.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "I8Wn1FD/0Dzo3jxHY5kAAtZh/Etwd85zzfudAE7WYDA=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "92.38.138.112",
-          "92.38.138.135",
+          "92.38.138.118",
           "92.38.138.139",
+          "92.38.138.141",
           "92.38.138.148"
         ]
       },
@@ -108275,14 +108549,15 @@
         "retroloc": "Serbia",
         "hostname": "rs-beg.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "A3vmr6/umw5sP8anxNyipgi5oEnOnZdqB1K/cbQpMiI=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "37.120.193.51",
-          "37.120.193.53",
-          "152.89.160.61",
+          "152.89.160.59",
           "152.89.160.115",
-          "152.89.160.149"
+          "152.89.160.117"
         ]
       },
       {
@@ -108292,6 +108567,8 @@
         "retroloc": "Singapore Netherlands",
         "hostname": "sg-nl.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108305,11 +108582,17 @@
         "retroloc": "Slovekia",
         "hostname": "sk-bts.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "T5b7+uwUFqN5r1WsfBXURpSnYCYRLFAVreKkIQHGOlw=",
         "tcp": true,
         "udp": true,
         "ips": [
           "185.76.8.215",
-          "185.76.8.217"
+          "185.76.8.217",
+          "193.37.255.35",
+          "193.37.255.39",
+          "193.37.255.41"
         ]
       },
       {
@@ -108319,15 +108602,16 @@
         "retroloc": "Slovenia",
         "hostname": "si-lju.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "yPdmxOfzm06fotkt/dlaAiyxWPaWfCuDPaUljNx+c38=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "195.158.249.36",
+          "195.158.249.38",
           "195.158.249.40",
-          "195.158.249.46",
-          "195.158.249.48",
-          "195.158.249.59",
-          "195.158.249.61"
+          "195.158.249.42",
+          "195.158.249.59"
         ]
       },
       {
@@ -108337,13 +108621,22 @@
         "retroloc": "Spain Barcelona",
         "hostname": "es-bcn.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "3EC6079YDlzJKcNLdrm/t+JLG8hV3wPpoWE4MypjYnw=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "37.120.142.179",
-          "185.188.61.87",
-          "185.188.61.117",
-          "185.216.32.59"
+          "37.120.142.123",
+          "82.102.26.149",
+          "82.102.26.173",
+          "82.102.26.235",
+          "146.70.22.3",
+          "185.188.61.89",
+          "185.188.61.91",
+          "185.188.61.99",
+          "185.188.61.103",
+          "185.188.61.115"
         ]
       },
       {
@@ -108353,25 +108646,28 @@
         "retroloc": "Spain Madrid",
         "hostname": "es-mad.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "a30vOQfjwPzjRxGNi2dvSAMdaPHEYatR84cUjXKOwls=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "37.120.148.211",
-          "37.120.148.215",
+          "37.120.148.229",
           "82.102.17.179",
+          "82.102.17.181",
           "84.17.62.163",
           "84.17.62.165",
-          "89.37.95.15",
+          "89.37.95.13",
           "89.37.95.19",
-          "89.37.95.23",
-          "89.37.95.25",
+          "89.37.95.27",
           "89.37.95.171",
           "89.37.95.177",
           "89.37.95.185",
-          "188.208.141.20",
-          "188.208.141.34",
           "212.102.48.2",
-          "212.102.48.18"
+          "212.102.48.4",
+          "212.102.48.8",
+          "212.102.48.13",
+          "212.102.48.15"
         ]
       },
       {
@@ -108381,17 +108677,24 @@
         "retroloc": "Spain Valencia",
         "hostname": "es-vlc.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "TlYKGW07dqFfedNfAnVIPv2WPfC54h96se+dcIDuNhU=",
         "tcp": true,
         "udp": true,
         "ips": [
+          "185.153.150.44",
           "185.153.150.48",
-          "185.153.150.52",
-          "185.153.150.70",
+          "185.153.150.50",
+          "185.153.150.58",
+          "185.153.150.61",
+          "185.153.150.72",
+          "185.153.150.76",
           "185.153.150.78",
-          "185.153.150.84",
-          "196.196.150.67",
+          "185.153.150.86",
           "196.196.150.69",
-          "196.196.150.71"
+          "196.196.150.71",
+          "196.196.150.101"
         ]
       },
       {
@@ -108401,17 +108704,18 @@
         "retroloc": "Sweden",
         "hostname": "se-sto.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "oUFRc+2emXgogDVWnJF4RAzr72PyafCzMVeQOgG92lY=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "45.83.91.133",
-          "185.76.9.34",
-          "185.76.9.49",
-          "185.76.9.51",
-          "185.76.9.55",
-          "185.76.9.57",
-          "195.181.166.226",
-          "195.181.166.228"
+          "45.83.91.151",
+          "185.76.9.36",
+          "185.76.9.39",
+          "185.76.9.41",
+          "185.76.9.44",
+          "185.76.9.46"
         ]
       },
       {
@@ -108421,13 +108725,20 @@
         "retroloc": "Switzerland",
         "hostname": "ch-zur.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "qFuwaE8IyDbNBTNar3xAXRGaBdkTtmLh1uIGMJxTxUs=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "37.120.213.7",
+          "37.120.213.5",
           "45.12.222.243",
-          "84.17.53.216",
-          "156.146.62.46"
+          "84.17.53.208",
+          "84.17.53.219",
+          "84.17.53.221",
+          "156.146.62.36",
+          "156.146.62.39",
+          "156.146.62.41"
         ]
       },
       {
@@ -108437,10 +108748,15 @@
         "retroloc": "Turkey Istanbul",
         "hostname": "tr-ist.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "sF/TlxU9XaDN3QQBT/lu2Pw9qpD3XpDqLBfInBtff2A=",
         "tcp": true,
         "udp": true,
         "ips": [
           "107.150.94.13",
+          "107.150.94.27",
+          "107.150.94.29",
           "107.150.94.43"
         ]
       },
@@ -108451,6 +108767,8 @@
         "retroloc": "UK France",
         "hostname": "uk-fr.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108464,6 +108782,8 @@
         "retroloc": "UK Germany",
         "hostname": "uk-de.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108477,6 +108797,8 @@
         "retroloc": "US Netherlands",
         "hostname": "us-nl.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108490,6 +108812,8 @@
         "retroloc": "US Portugal",
         "hostname": "us-pt.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108503,6 +108827,9 @@
         "retroloc": "Ukraine",
         "hostname": "ua-iev.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "wy+PhWBP715KfBrsQR4P3JUalYc9a77FmZWQinwYLmo=",
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108519,13 +108846,16 @@
         "retroloc": "UK Glasgow",
         "hostname": "uk-gla.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "QiFHJ7wtwhXEztRqBjGrFphsFXtlAFWwMDgruFKq0XE=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "185.108.105.45",
-          "185.108.105.63",
-          "185.108.105.79",
-          "185.108.105.131"
+          "185.108.105.89",
+          "185.108.105.125",
+          "185.108.105.137",
+          "185.108.105.141"
         ]
       },
       {
@@ -108535,6 +108865,8 @@
         "retroloc": "UK London mp001",
         "hostname": "uk-lon-mp001.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108548,6 +108880,8 @@
         "retroloc": "UK London st001",
         "hostname": "uk-lon-st001.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108561,6 +108895,8 @@
         "retroloc": "UK London st002",
         "hostname": "uk-lon-st002.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108574,6 +108910,8 @@
         "retroloc": "UK London st003",
         "hostname": "uk-lon-st003.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108587,6 +108925,8 @@
         "retroloc": "UK London st004",
         "hostname": "uk-lon-st004.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108600,6 +108940,8 @@
         "retroloc": "UK London st005",
         "hostname": "uk-lon-st005.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108613,13 +108955,18 @@
         "retroloc": "UK London",
         "hostname": "uk-lon.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "iBJRXLZwXuWWrOZE1ZrAXEKMgV/z0WjG0Tks5rnWLBI=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "5.226.137.10",
-          "185.38.148.228",
-          "185.44.77.56",
-          "217.146.82.189"
+          "185.16.206.116",
+          "185.44.77.48",
+          "185.114.224.119",
+          "185.125.207.155",
+          "188.240.71.163",
+          "217.146.82.228"
         ]
       },
       {
@@ -108629,17 +108976,22 @@
         "retroloc": "UK Manchester",
         "hostname": "uk-man.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "9R8He1cP8Laf5MT58FcaEYtPW/qnN3M9MQThIXOIvHs=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "37.120.159.141",
-          "37.120.233.157",
-          "86.106.136.67",
-          "89.238.130.245",
-          "91.90.121.187",
-          "194.37.96.229",
-          "194.37.98.61",
-          "194.37.98.246"
+          "37.120.233.27",
+          "37.120.233.59",
+          "37.120.233.101",
+          "89.238.130.243",
+          "91.90.121.163",
+          "91.90.121.195",
+          "91.90.121.211",
+          "139.28.176.27",
+          "139.28.176.155",
+          "194.37.98.99"
         ]
       },
       {
@@ -108649,12 +109001,15 @@
         "retroloc": "Israel",
         "hostname": "il-tlv.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "ZEG2fUrtohnVePblUlDM6wyyeTobzsABnMjTTFmqNUE=",
         "tcp": true,
         "udp": true,
         "ips": [
           "84.110.41.83",
           "84.110.41.85",
-          "87.239.255.116",
+          "87.239.255.114",
           "87.239.255.119"
         ]
       },
@@ -108665,14 +109020,17 @@
         "retroloc": "Nigeria",
         "hostname": "ng-lag.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "mMmsmMyqtASb4V42H5nxyD8BgauWrNhCCZdBHCsbC00=",
         "tcp": true,
         "udp": true,
         "ips": [
+          "102.165.23.4",
           "102.165.23.6",
+          "102.165.23.38",
           "102.165.23.40",
           "102.165.23.42",
-          "102.165.23.44",
-          "102.165.25.132",
           "102.165.25.134"
         ]
       },
@@ -108683,15 +109041,20 @@
         "retroloc": "South Africa",
         "hostname": "za-jnb.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "Wj/fSWxNLs1igL1uTRp4zLFNohe4S1wqNTYRHevthUA=",
         "tcp": true,
         "udp": true,
         "ips": [
           "102.165.19.18",
-          "102.165.19.20",
-          "102.165.47.134",
+          "102.165.47.132",
+          "102.165.47.136",
           "102.165.47.138",
+          "154.16.93.51",
           "154.16.93.53",
-          "154.127.49.232"
+          "154.127.49.228",
+          "154.127.50.136"
         ]
       },
       {
@@ -108701,14 +109064,18 @@
         "retroloc": "United Arab Emirates",
         "hostname": "ae-dub.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "6dZGkg0iAMgQuOCGknAgBAqDEeJeBQ4Of5eblO4aNC8=",
         "tcp": true,
         "udp": true,
         "ips": [
           "176.125.231.3",
           "176.125.231.5",
-          "176.125.231.11",
+          "176.125.231.13",
           "176.125.231.19",
-          "176.125.231.27"
+          "176.125.231.27",
+          "176.125.231.35"
         ]
       },
       {
@@ -108718,21 +109085,16 @@
         "retroloc": "Argentina Buenos Aires",
         "hostname": "ar-bua.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "JeHzAD4ZNXnFw4TdG37pi8bHPy6CQQqeRXK09pMHVyU=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "91.206.168.11",
           "91.206.168.13",
-          "91.206.168.15",
-          "91.206.168.19",
-          "91.206.168.34",
-          "91.206.168.39",
-          "91.206.168.58",
-          "91.206.168.60",
-          "91.206.168.66",
-          "91.206.168.68",
-          "91.206.168.70",
-          "91.206.168.72"
+          "91.206.168.21",
+          "91.206.168.62",
+          "91.206.168.66"
         ]
       },
       {
@@ -108742,6 +109104,8 @@
         "retroloc": "Australia US",
         "hostname": "au-us.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108755,19 +109119,17 @@
         "retroloc": "Brazil",
         "hostname": "br-sao.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "IFTVXxhLEqVgZI/JGOPRtmrNUQW1DNljeBe8Ys7v90A=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "138.199.58.86",
-          "138.199.58.88",
-          "138.199.58.97",
-          "191.96.13.194",
+          "138.199.4.93",
+          "138.199.58.81",
+          "191.96.13.38",
           "191.96.13.204",
           "191.96.13.206",
-          "191.96.13.208",
-          "191.96.15.86",
-          "191.96.15.88",
-          "191.96.73.210",
           "191.96.73.216"
         ]
       },
@@ -108778,15 +109140,26 @@
         "retroloc": "Canada Montreal",
         "hostname": "ca-mon.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "pB//7qgQ/TQyIMQWKO9GvUfJNYCfVZYwjF2nXPGIEX8=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "91.245.254.67",
-          "91.245.254.75",
-          "91.245.254.99",
-          "91.245.254.235",
+          "86.106.90.27",
+          "86.106.90.35",
+          "86.106.90.37",
+          "91.245.254.19",
+          "91.245.254.61",
+          "91.245.254.69",
+          "91.245.254.101",
+          "91.245.254.131",
+          "91.245.254.237",
+          "146.70.27.11",
           "146.70.27.43",
-          "217.138.200.187"
+          "146.70.27.61",
+          "172.98.82.243",
+          "172.98.82.245"
         ]
       },
       {
@@ -108796,6 +109169,8 @@
         "retroloc": "Canada Toronto mp001",
         "hostname": "ca-tor-mp001.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108809,15 +109184,20 @@
         "retroloc": "Canada Toronto",
         "hostname": "ca-tor.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "W9bzkcL3fiV64vDpB4pbrz8QafNn3y5P9Yc/kQvy4TA=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "37.19.211.47",
-          "37.19.211.69",
+          "37.19.211.27",
+          "37.19.211.44",
+          "37.19.211.52",
+          "37.19.211.64",
           "37.19.211.72",
+          "37.19.211.87",
           "37.19.211.109",
-          "37.19.211.137",
-          "138.199.57.41"
+          "37.19.211.119"
         ]
       },
       {
@@ -108827,13 +109207,18 @@
         "retroloc": "Canada Vancouver",
         "hostname": "ca-van.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "o4HezxSsbNqJFJZj+VBw/QXFLpfNo7PZu8xe7H2hTw0=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "66.115.147.79",
-          "66.115.147.82",
-          "66.115.147.84",
-          "198.8.92.82"
+          "66.115.147.77",
+          "104.200.132.39",
+          "107.181.177.183",
+          "198.8.92.69",
+          "198.8.92.72",
+          "208.78.41.202"
         ]
       },
       {
@@ -108843,6 +109228,8 @@
         "retroloc": "Canada US",
         "hostname": "ca-us.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108856,6 +109243,9 @@
         "retroloc": "Chile",
         "hostname": "cl-san.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "FdTRnh0g+FYFPj5UURQIcDbygd+2gMRrslErfmZxdDo=",
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108870,11 +109260,14 @@
         "retroloc": "Colombia",
         "hostname": "co-bog.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "lLqqxZuCTtIpBjgZJYWzPQn/7st24iVpJN+/xS7jogs=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "45.129.32.10",
-          "45.129.32.13"
+          "45.129.32.15",
+          "45.129.32.27"
         ]
       },
       {
@@ -108884,9 +109277,14 @@
         "retroloc": "Costa Rica",
         "hostname": "cr-sjn.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "HPggZ80tXf9TpiZzy8xih7PIWjexg4Kyg3lzUGXoDHU=",
         "tcp": true,
         "udp": true,
         "ips": [
+          "176.227.241.19",
+          "176.227.241.21",
           "176.227.241.24",
           "176.227.241.26",
           "176.227.241.31",
@@ -108900,12 +109298,19 @@
         "retroloc": "Mexico City Mexico",
         "hostname": "mx-mex.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "g1XvxbJyZoNdqxm9xf04Lr/bxX9O3Rm5PUsUlzvnczs=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "194.41.112.14",
-          "194.41.112.16",
+          "194.41.112.9",
+          "194.41.112.11",
+          "194.41.112.21",
           "194.41.112.26",
+          "194.41.112.28",
+          "194.41.112.30",
+          "194.41.112.33",
           "194.41.112.39"
         ]
       },
@@ -108916,6 +109321,8 @@
         "retroloc": "Netherlands US",
         "hostname": "nl-us.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108929,6 +109336,9 @@
         "retroloc": "",
         "hostname": "pa-pac.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "9L1tbh/IHrrtImJnuEsVc1eN7xChlLzS6nCMaVyH/iQ=",
         "tcp": true,
         "udp": true,
         "ips": [
@@ -108945,12 +109355,13 @@
         "retroloc": "",
         "hostname": "pe-lim.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "mR3GelqqkAL6IKKbzcdxJm3f3uyVNxdzCCtTcLT+wUc=",
         "tcp": true,
         "udp": true,
         "ips": [
           "193.218.35.9",
-          "193.218.35.12",
-          "193.218.35.14",
           "193.218.35.19"
         ]
       },
@@ -108961,11 +109372,14 @@
         "retroloc": "",
         "hostname": "us-ash.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "9ef2f8mXHnAxx06lx4OxhtzASfJgv6YfEimuVyef6QE=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "37.19.220.199",
-          "37.19.220.201"
+          "37.19.220.194",
+          "37.19.220.196"
         ]
       },
       {
@@ -108975,15 +109389,20 @@
         "retroloc": "US Atlanta",
         "hostname": "us-atl.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "SgciXll6wGQhcyxPUdp0V0z6WwN9P3fqDoeh3N3xNjc=",
         "tcp": true,
         "udp": true,
         "ips": [
           "66.115.154.135",
           "66.115.154.151",
-          "66.115.166.149",
-          "66.115.175.35",
-          "66.115.175.45",
-          "66.115.175.50"
+          "66.115.166.147",
+          "66.115.166.151",
+          "66.115.169.35",
+          "195.181.171.233",
+          "195.181.171.241",
+          "195.181.171.243"
         ]
       },
       {
@@ -108993,16 +109412,16 @@
         "retroloc": "US Bend",
         "hostname": "us-bdn.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "YaxEFQHtwF/EGvf5s/aLlX5Jr0djKTV5oNcAcIwAz0E=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "45.43.14.75",
-          "45.43.14.83",
           "45.43.14.95",
           "45.43.14.105",
           "104.255.169.130",
-          "154.16.168.186",
-          "154.16.168.188"
+          "154.16.168.184"
         ]
       },
       {
@@ -109012,15 +109431,18 @@
         "retroloc": "US Boston",
         "hostname": "us-bos.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "V0vpMcp0/586Y/q1EzW9PhM45JhypnCYgmrP0rzDEVw=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "173.237.207.11",
           "173.237.207.13",
-          "173.237.207.44",
+          "173.237.207.23",
+          "173.237.207.32",
+          "173.237.207.36",
           "173.237.207.52",
-          "173.237.207.62",
-          "173.237.207.66"
+          "173.237.207.60"
         ]
       },
       {
@@ -109030,13 +109452,20 @@
         "retroloc": "US Buffalo",
         "hostname": "us-buf.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "156ry2sOmv+I9KYTy2jR4/BLTnPT+Qn+DoCNqOon1ys=",
         "tcp": true,
         "udp": true,
         "ips": [
+          "64.44.42.56",
+          "64.44.42.162",
+          "64.44.42.164",
           "64.44.42.194",
           "64.44.42.196",
-          "107.174.20.134",
-          "107.175.104.86"
+          "172.93.146.84",
+          "172.93.146.210",
+          "172.93.146.212"
         ]
       },
       {
@@ -109046,19 +109475,17 @@
         "retroloc": "US Charlotte",
         "hostname": "us-clt.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "tLnNDtNUOScxIU6t70ujsx1erSWOj9hWkWJD5iJwPwc=",
         "tcp": true,
         "udp": true,
         "ips": [
           "66.11.124.17",
           "154.16.171.195",
           "154.16.171.197",
-          "154.16.171.206",
-          "154.16.171.213",
-          "155.254.28.141",
-          "155.254.29.163",
-          "155.254.31.184",
-          "192.154.253.67",
-          "192.154.254.135",
+          "155.254.31.182",
+          "192.154.254.137",
           "192.158.224.110"
         ]
       },
@@ -109069,16 +109496,18 @@
         "retroloc": "US Chicago",
         "hostname": "us-chi.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "DpMfulanF/MVHmt3AX4dqLqcyE0dpPqYBjDlWMaUI00=",
         "tcp": true,
         "udp": true,
         "ips": [
           "89.187.182.173",
-          "89.187.182.175",
           "138.199.42.129",
           "138.199.42.131",
-          "138.199.42.133",
-          "138.199.42.135",
-          "143.244.60.167"
+          "138.199.42.149",
+          "143.244.60.167",
+          "143.244.60.169"
         ]
       },
       {
@@ -109088,19 +109517,16 @@
         "retroloc": "US Dallas",
         "hostname": "us-dal.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "0iwHQpV+rsOg38ogv4g4XMLJa51YqWY/yKWR9UEUMDk=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "66.115.177.131",
-          "66.115.177.138",
-          "66.115.177.141",
-          "66.115.177.143",
-          "66.115.177.146",
-          "66.115.177.151",
-          "66.115.177.158",
-          "89.187.175.167",
-          "172.241.114.89",
-          "212.102.40.78"
+          "212.102.40.66",
+          "212.102.40.73",
+          "212.102.40.76",
+          "212.102.40.83"
         ]
       },
       {
@@ -109110,17 +109536,14 @@
         "retroloc": "US Denver",
         "hostname": "us-den.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "AnRLZKBwCfuGFZfoa3dsdjpcpvgFsQhASmjHXhIJLgM=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "212.102.44.68",
-          "212.102.44.71",
-          "212.102.44.81",
-          "212.102.44.86",
-          "212.102.44.91",
-          "212.102.44.93",
-          "212.102.44.96",
-          "212.102.44.98"
+          "212.102.44.66",
+          "212.102.44.76"
         ]
       },
       {
@@ -109130,20 +109553,22 @@
         "retroloc": "US Gahanna",
         "hostname": "us-dtw.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "WFhlLK8H1pRzgMggza5NhBMjIcGhmsCqjR8+yFRfXhg=",
         "tcp": true,
         "udp": true,
         "ips": [
+          "38.146.4.243",
           "38.146.4.245",
-          "104.244.208.35",
           "104.244.208.37",
-          "104.244.208.203",
-          "104.244.208.205",
+          "104.244.208.99",
+          "104.244.208.109",
           "104.244.208.227",
-          "104.244.210.117",
-          "104.244.210.133",
-          "104.244.210.139",
-          "104.244.210.155",
-          "104.244.211.173"
+          "104.244.209.53",
+          "104.244.210.131",
+          "104.244.211.173",
+          "104.244.211.179"
         ]
       },
       {
@@ -109153,22 +109578,16 @@
         "retroloc": "US Houston",
         "hostname": "us-hou.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "1g84fGxVJokKXdMYEJKjN6/opyYN/YSHmrMyw0v6VnM=",
         "tcp": true,
         "udp": true,
         "ips": [
           "199.10.64.99",
-          "199.10.64.115",
-          "199.10.64.131",
-          "199.10.64.149",
-          "199.10.64.163",
           "199.10.64.165",
-          "199.10.64.179",
-          "199.10.64.195",
-          "199.10.64.197",
           "199.10.64.211",
-          "199.10.64.213",
-          "199.10.64.227",
-          "199.10.64.229"
+          "199.10.64.213"
         ]
       },
       {
@@ -109178,13 +109597,16 @@
         "retroloc": "US Kansas City",
         "hostname": "us-kan.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "SWN/jzfK69ucEUqQyPejKb9wWxwUoOgG37YlgeCmvjg=",
         "tcp": true,
         "udp": true,
         "ips": [
           "63.141.236.243",
-          "63.141.236.245",
           "63.141.248.179",
-          "173.208.149.195",
+          "69.30.249.123",
+          "69.30.249.125",
           "198.204.231.147",
           "198.204.231.149"
         ]
@@ -109196,17 +109618,21 @@
         "retroloc": "US Las Vegas",
         "hostname": "us-las.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "Nw5CG5BOvqb8GXVEKLOo7v3gGvP7WaUYlJT++c3c31g=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "79.110.53.203",
+          "79.110.54.91",
           "79.110.54.93",
-          "79.110.54.115",
           "79.110.54.117",
           "79.110.54.123",
+          "79.110.54.125",
+          "79.110.54.133",
           "185.242.5.147",
-          "185.242.5.149",
           "185.242.5.155",
+          "185.242.5.157",
           "185.242.5.213"
         ]
       },
@@ -109217,16 +109643,16 @@
         "retroloc": "US Latham",
         "hostname": "us-ltm.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "Smruh1SmMqi7CecjV/+yI4Sy62gpAr+Uddq+9K6iLB0=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "45.43.19.68",
+          "45.43.19.66",
+          "45.43.19.74",
           "45.43.19.76",
-          "45.43.19.82",
-          "45.43.19.84",
-          "45.43.19.90",
-          "45.43.19.92",
-          "154.16.169.7"
+          "45.43.19.84"
         ]
       },
       {
@@ -109236,14 +109662,19 @@
         "retroloc": "US Los Angeles",
         "hostname": "us-lax.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "m+L7BVQWDwU2TxjfspMRLkRctvmo7fOkd+eVk6KC5lM=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "84.17.45.247",
-          "89.187.187.68",
-          "89.187.187.88",
-          "184.170.243.199",
-          "192.111.134.212"
+          "84.17.45.249",
+          "89.187.187.71",
+          "89.187.187.81",
+          "89.187.187.149",
+          "138.199.9.204",
+          "192.111.134.207",
+          "192.111.134.222"
         ]
       },
       {
@@ -109253,16 +109684,19 @@
         "retroloc": "US Maryland",
         "hostname": "us-mnz.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "bhy9WHOoLswdlLsErOHjiwK6+psjWs9vr/VvUuwUD3s=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "23.82.8.173",
-          "23.105.163.80",
+          "23.105.178.142",
           "23.105.178.160",
           "162.210.199.215",
+          "207.244.84.42",
           "207.244.84.44",
-          "207.244.127.47",
-          "207.244.127.116"
+          "207.244.125.132",
+          "207.244.127.118"
         ]
       },
       {
@@ -109272,15 +109706,18 @@
         "retroloc": "US Miami",
         "hostname": "us-mia.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "KvJ/jtWb8BsBI85OcZnOIJu9kfh12mCMR4cejWFpDCc=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "23.82.142.229",
           "23.108.54.70",
-          "45.87.214.251",
+          "45.87.214.245",
+          "87.101.93.131",
           "87.101.93.173",
-          "89.38.227.171",
-          "193.37.252.199"
+          "89.38.227.165",
+          "193.27.12.245"
         ]
       },
       {
@@ -109290,6 +109727,8 @@
         "retroloc": "US New York City mp001",
         "hostname": "us-nyc-mp001.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -109303,6 +109742,8 @@
         "retroloc": "US New York City st001",
         "hostname": "us-nyc-st001.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -109316,6 +109757,8 @@
         "retroloc": "US New York City st002",
         "hostname": "us-nyc-st002.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -109329,6 +109772,8 @@
         "retroloc": "US New York City st003",
         "hostname": "us-nyc-st003.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -109342,6 +109787,8 @@
         "retroloc": "US New York City st004",
         "hostname": "us-nyc-st004.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -109355,6 +109802,8 @@
         "retroloc": "US New York City st005",
         "hostname": "us-nyc-st005.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -109368,17 +109817,20 @@
         "retroloc": "US New York City",
         "hostname": "us-nyc.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "rhuoCmHdyYrh0zW3J0YXZK4aN3It7DD26TXlACuWnwU=",
         "tcp": true,
         "udp": true,
         "ips": [
+          "37.19.199.206",
           "37.19.199.209",
           "37.19.199.216",
-          "37.120.202.3",
-          "37.120.202.5",
-          "84.17.35.88",
-          "84.17.35.101",
-          "138.199.40.162",
-          "138.199.40.174"
+          "84.17.35.71",
+          "84.17.35.103",
+          "84.17.35.106",
+          "138.199.40.169",
+          "138.199.40.179"
         ]
       },
       {
@@ -109388,15 +109840,20 @@
         "retroloc": "US Orlando",
         "hostname": "us-orl.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "0iM91xLBR3EUjujSyynEACiZibB6ywdG47sdnVEQ2yk=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "66.115.182.69",
+          "66.115.182.43",
+          "66.115.182.67",
           "66.115.182.74",
-          "198.147.22.85",
-          "198.147.22.133",
-          "198.147.22.151",
-          "198.147.22.195"
+          "66.115.182.84",
+          "66.115.182.101",
+          "66.115.182.104",
+          "66.115.182.106",
+          "198.147.22.151"
         ]
       },
       {
@@ -109406,17 +109863,18 @@
         "retroloc": "US Phoenix",
         "hostname": "us-phx.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "HDCyeD2+lw6KHVMu7Opkt4V4ikYZHzQNWmwklBMb4Ac=",
         "tcp": true,
         "udp": true,
         "ips": [
           "23.81.207.110",
-          "23.83.128.233",
           "23.83.128.235",
-          "199.58.187.5",
+          "184.170.240.181",
+          "199.58.187.10",
           "199.58.187.13",
-          "199.58.187.20",
-          "199.58.187.67",
-          "199.58.187.69"
+          "199.58.187.20"
         ]
       },
       {
@@ -109426,13 +109884,16 @@
         "retroloc": "US Salt Lake City",
         "hostname": "us-slc.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "jxotWPy1jNzKzjqSqg6KkWnoOsp/FbrTK4+j9gluSFA=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "104.200.131.167",
-          "104.200.131.229",
-          "104.200.131.245",
-          "209.95.41.29"
+          "104.200.131.165",
+          "104.200.131.170",
+          "104.200.131.233",
+          "104.200.131.249"
         ]
       },
       {
@@ -109442,6 +109903,8 @@
         "retroloc": "US San Francisco mp001",
         "hostname": "us-sfo-mp001.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": false,
         "tcp": true,
         "udp": true,
         "ips": [
@@ -109455,16 +109918,15 @@
         "retroloc": "US San Francisco",
         "hostname": "us-sfo.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "7SpGSSI78hf8jy689ec5Ql0/Gsq0LLHDmjEFsGUWl1k=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "23.81.115.195",
           "23.81.178.219",
-          "23.81.181.7",
-          "185.124.240.145",
-          "185.124.240.147",
-          "185.124.240.149",
-          "185.124.240.165",
+          "23.81.181.3",
+          "185.124.240.159",
           "185.124.240.169"
         ]
       },
@@ -109475,15 +109937,16 @@
         "retroloc": "US Seatle",
         "hostname": "us-sea.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "SpMH/p90bg9ZAG6V2DWJQ9csWPVnKcDVppIp9Xul5G8=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "84.17.41.71",
-          "212.102.46.42",
-          "212.102.46.49",
-          "212.102.46.65",
-          "212.102.46.69",
-          "212.102.46.71"
+          "84.17.41.75",
+          "212.102.46.51",
+          "212.102.46.54",
+          "212.102.46.56"
         ]
       },
       {
@@ -109493,13 +109956,16 @@
         "retroloc": "US Saint Louis",
         "hostname": "us-stl.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "2s5wcEyToBVqPgnZzig3PCLfGI7J/CU9GYAxCIQc2Do=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "148.72.169.209",
-          "148.72.171.178",
-          "148.72.174.41",
-          "148.72.174.48"
+          "148.72.174.36",
+          "148.72.174.43",
+          "148.72.174.51",
+          "148.72.174.53"
         ]
       },
       {
@@ -109509,14 +109975,16 @@
         "retroloc": "US Tampa",
         "hostname": "us-tpa.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "PDALU3lNKMUngtLtfCAcfxrHq3C8AFzI/OVwlQd7WBQ=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "209.216.85.165",
-          "209.216.92.10",
           "209.216.92.15",
-          "209.216.92.197",
-          "209.216.92.207"
+          "209.216.92.195",
+          "209.216.92.207",
+          "209.216.92.215"
         ]
       },
       {
@@ -109526,11 +109994,12 @@
         "retroloc": "",
         "hostname": "ve-car.prod.surfshark.com",
         "multihop": false,
+        "openvpn": true,
+        "wireguard": true,
+        "wgpubkey": "fK7yvbWdPrpginzYzhQu7IT6J+Mf18/K+VNrwyXqriU=",
         "tcp": true,
         "udp": true,
         "ips": [
-          "45.149.3.3",
-          "45.149.3.5",
           "45.149.3.7",
           "45.149.3.9"
         ]
