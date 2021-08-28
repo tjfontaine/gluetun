@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"github.com/qdm12/gluetun/internal/models"
+	cyberghost "github.com/qdm12/gluetun/internal/provider/cyberghost/storage"
 )
 
 func (s *Storage) logVersionDiff(provider string, diff int) {
@@ -33,7 +34,7 @@ func (s *Storage) logTimeDiff(provider string, persistedUnix, hardcodedUnix int6
 func (s *Storage) mergeServers(hardcoded, persisted models.AllServers) models.AllServers {
 	return models.AllServers{
 		Version:      hardcoded.Version,
-		Cyberghost:   s.mergeCyberghost(hardcoded.Cyberghost, persisted.Cyberghost),
+		Cyberghost:   cyberghost.Merge(hardcoded.Cyberghost, persisted.Cyberghost, s.logger),
 		Fastestvpn:   s.mergeFastestvpn(hardcoded.Fastestvpn, persisted.Fastestvpn),
 		HideMyAss:    s.mergeHideMyAss(hardcoded.HideMyAss, persisted.HideMyAss),
 		Ipvanish:     s.mergeIpvanish(hardcoded.Ipvanish, persisted.Ipvanish),
@@ -51,21 +52,6 @@ func (s *Storage) mergeServers(hardcoded, persisted models.AllServers) models.Al
 		Vyprvpn:      s.mergeVyprvpn(hardcoded.Vyprvpn, persisted.Vyprvpn),
 		Windscribe:   s.mergeWindscribe(hardcoded.Windscribe, persisted.Windscribe),
 	}
-}
-
-func (s *Storage) mergeCyberghost(hardcoded, persisted models.CyberghostServers) models.CyberghostServers {
-	if persisted.Timestamp <= hardcoded.Timestamp {
-		return hardcoded
-	}
-
-	versionDiff := int(hardcoded.Version) - int(persisted.Version)
-	if versionDiff > 0 {
-		s.logVersionDiff("Cyberghost", versionDiff)
-		return hardcoded
-	}
-
-	s.logTimeDiff("Cyberghost", persisted.Timestamp, hardcoded.Timestamp)
-	return persisted
 }
 
 func (s *Storage) mergeFastestvpn(hardcoded, persisted models.FastestvpnServers) models.FastestvpnServers {

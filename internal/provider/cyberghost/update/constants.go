@@ -1,4 +1,4 @@
-package cyberghost
+package update
 
 func getGroups() map[string]string {
 	return map[string]string{

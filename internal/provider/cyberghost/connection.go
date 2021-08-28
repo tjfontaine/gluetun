@@ -4,6 +4,7 @@ import (
 	"github.com/qdm12/gluetun/internal/configuration"
 	"github.com/qdm12/gluetun/internal/constants"
 	"github.com/qdm12/gluetun/internal/models"
+	"github.com/qdm12/gluetun/internal/provider/cyberghost/filter"
 	"github.com/qdm12/gluetun/internal/provider/utils"
 )
 
@@ -15,7 +16,7 @@ func (c *Cyberghost) GetConnection(selection configuration.ServerSelection) (
 		protocol = constants.TCP
 	}
 
-	servers, err := c.filterServers(selection)
+	servers, err := filter.Servers(c.servers, selection)
 	if err != nil {
 		return connection, err
 	}

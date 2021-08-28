@@ -1,6 +1,4 @@
-// Package cyberghost contains code to obtain the server information
-// for the Cyberghost provider.
-package cyberghost
+package update
 
 import (
 	"context"

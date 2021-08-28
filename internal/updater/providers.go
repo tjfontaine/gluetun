@@ -6,7 +6,7 @@ import (
 	"reflect"
 
 	"github.com/qdm12/gluetun/internal/constants"
-	"github.com/qdm12/gluetun/internal/updater/providers/cyberghost"
+	cyberghost "github.com/qdm12/gluetun/internal/provider/cyberghost/update"
 	"github.com/qdm12/gluetun/internal/updater/providers/fastestvpn"
 	"github.com/qdm12/gluetun/internal/updater/providers/hidemyass"
 	"github.com/qdm12/gluetun/internal/updater/providers/ipvanish"

@@ -9,9 +9,18 @@
 
 ## Uniformization
 
+- Move configuration structures to models package
+- Split configuration reading from configuration validation
 - Filter servers by protocol for all
 - Multiple IPs addresses support for all proviedrs
-- Use `internal/netlink` in firewall and routing packages
+- Change code structure to have everything for one provider in the same directory
+  - Constants
+  - Configuration reading
+  - Configuration validation
+  - OpenVPN config
+  - Connection building and server filtering
+  - Updater
+  - Storage
 
 ## Code
 

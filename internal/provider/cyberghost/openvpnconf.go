@@ -7,6 +7,7 @@ import (
 	"github.com/qdm12/gluetun/internal/configuration"
 	"github.com/qdm12/gluetun/internal/constants"
 	"github.com/qdm12/gluetun/internal/models"
+	cyberghostconstants "github.com/qdm12/gluetun/internal/provider/cyberghost/constants"
 	"github.com/qdm12/gluetun/internal/provider/utils"
 )
 
@@ -79,7 +80,7 @@ func (c *Cyberghost) BuildConf(connection models.Connection,
 	}
 
 	lines = append(lines, utils.WrapOpenvpnCA(
-		constants.CyberghostCertificate)...)
+		cyberghostconstants.Certificate)...)
 	lines = append(lines, utils.WrapOpenvpnCert(
 		settings.ClientCrt)...)
 	lines = append(lines, utils.WrapOpenvpnKey(

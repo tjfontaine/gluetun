@@ -1,4 +1,4 @@
-package cyberghost
+package update
 
 func mergeCountryCodes(base, extend map[string]string) (merged map[string]string) {
 	merged = make(map[string]string, len(base))

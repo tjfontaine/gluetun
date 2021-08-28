@@ -1,4 +1,4 @@
-package cyberghost
+package filter
 
 import (
 	"errors"
@@ -11,7 +11,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func Test_Cyberghost_filterServers(t *testing.T) {
+func Test_Servers(t *testing.T) {
 	t.Parallel()
 	testCases := map[string]struct {
 		servers         []models.CyberghostServer
@@ -128,8 +128,8 @@ func Test_Cyberghost_filterServers(t *testing.T) {
 		testCase := testCase
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
-			c := &Cyberghost{servers: testCase.servers}
-			filteredServers, err := c.filterServers(testCase.selection)
+
+			filteredServers, err := Servers(testCase.servers, testCase.selection)
 
 			if testCase.err != nil {
 				require.Error(t, err)
@@ -154,11 +154,12 @@ func Test_tcpGroupChoices(t *testing.T) {
 		{Group: "Premium UDP Europe"},
 		{Group: "Premium UDP USA"},
 	}
+
+	choices := tcpGroupChoices(servers)
+
 	expected := []string{
 		"Premium TCP Asia", "Premium TCP Europe", "Premium TCP USA",
 	}
-	choices := tcpGroupChoices(servers)
-
 	assert.Equal(t, expected, choices)
 }
 
@@ -173,10 +174,11 @@ func Test_udpGroupChoices(t *testing.T) {
 		{Group: "Premium UDP Europe"},
 		{Group: "Premium UDP USA"},
 	}
+
+	choices := udpGroupChoices(servers)
+
 	expected := []string{
 		"Premium UDP Asia", "Premium UDP Europe", "Premium UDP USA",
 	}
-	choices := udpGroupChoices(servers)
-
 	assert.Equal(t, expected, choices)
 }
