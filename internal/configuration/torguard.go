@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/qdm12/gluetun/internal/constants"
+	"github.com/qdm12/golibs/params"
 )
 
 func (settings *Provider) readTorguard(r reader) (err error) {
@@ -31,5 +32,32 @@ func (settings *Provider) readTorguard(r reader) (err error) {
 		return fmt.Errorf("environment variable SERVER_HOSTNAME: %w", err)
 	}
 
-	return settings.ServerSelection.OpenVPN.readProtocolAndPort(r.env)
+	if settings.ServerSelection.VPN == constants.OpenVPN {
+		err = settings.ServerSelection.OpenVPN.readProtocolAndPort(r.env)
+	} else {
+		err = settings.ServerSelection.Wireguard.readTorguard(r.env)
+	}
+
+	return err
+}
+
+func (settings *WireguardSelection) readTorguard(env params.Interface) (err error) {
+	settings.PublicKey, err = env.Get("WIREGUARD_PUBLIC_KEY",
+		params.CaseSensitiveValue(), params.Compulsory())
+	if err != nil {
+		return fmt.Errorf("environment variable WIREGUARD_PUBLIC_KEY: %w", err)
+	}
+
+	settings.EndpointIP, err = readWireguardEndpointIP(env)
+	if err != nil {
+		return err
+	}
+
+	const portCompulsory = true
+	settings.EndpointPort, err = readWireguardEndpointPort(env, nil, portCompulsory)
+	if err != nil {
+		return err
+	}
+
+	return nil
 }

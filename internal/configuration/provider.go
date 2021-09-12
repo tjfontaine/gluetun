@@ -107,7 +107,7 @@ func (settings *Provider) readVPNServiceProvider(r reader, vpnType string) (err 
 			"purevpn", "surfshark", "torguard", constants.VPNUnlimited, "vyprvpn", "windscribe"}
 	case constants.Wireguard:
 		allowedVPNServiceProviders = []string{constants.Mullvad, constants.Windscribe,
-			constants.Ivpn}
+			constants.Ivpn, constants.Torguard, constants.VPNUnlimited}
 	}
 
 	vpnsp, err := r.env.Inside("VPNSP", allowedVPNServiceProviders,
@@ -176,13 +176,19 @@ func readOpenVPNCustomPort(env params.Interface, tcp bool,
 		ErrInvalidPort, port, portsToString(allowedUDP))
 }
 
+var errMissingWireguardPort = errors.New("Wireguard port is not set")
+
 // note: set allowed to an empty slice to allow all valid ports
-func readWireguardCustomPort(env params.Interface, allowed []uint16) (port uint16, err error) {
+func readWireguardEndpointPort(env params.Interface, allowed []uint16,
+	compulsory bool) (port uint16, err error) {
 	port, err = readPortOrZero(env, "WIREGUARD_PORT")
 	if err != nil {
 		return 0, fmt.Errorf("environment variable WIREGUARD_PORT: %w", err)
 	} else if port == 0 {
-		return 0, nil
+		if !compulsory {
+			return 0, nil
+		}
+		return 0, fmt.Errorf("environment variable WIREGUARD_PORT: %w", errMissingWireguardPort)
 	}
 
 	if len(allowed) == 0 {
@@ -215,4 +221,21 @@ func (settings Provider) isOpenVPNCustomConfig(env params.Interface) (ok bool) {
 	isOpenVPN := s == constants.OpenVPN
 	s, _ = env.Get("OPENVPN_CUSTOM_CONFIG")
 	return isOpenVPN && s != ""
+}
+
+// readWireguardEndpointIP reads and parses the server endpoint IP
+// address from the environment variable WIREGUARD_ENDPOINT_IP.
+func readWireguardEndpointIP(env params.Interface) (endpointIP net.IP, err error) {
+	s, err := env.Get("WIREGUARD_ENDPOINT_IP", params.Compulsory())
+	if err != nil {
+		return nil, fmt.Errorf("environment variable WIREGUARD_ENDPOINT_IP: %w", err)
+	}
+
+	endpointIP = net.ParseIP(s)
+	if endpointIP == nil {
+		return nil, fmt.Errorf("environment variable WIREGUARD_ENDPOINT_IP: %w: %s",
+			ErrInvalidIP, s)
+	}
+
+	return endpointIP, nil
 }

@@ -13,6 +13,16 @@ var ErrProtocolUnsupported = errors.New("network protocol is not supported")
 
 func (p *Provider) GetConnection(selection configuration.ServerSelection) (
 	connection models.Connection, err error) {
+	if selection.VPN == constants.Wireguard {
+		return models.Connection{
+			Type:     constants.Wireguard,
+			IP:       selection.Wireguard.EndpointIP,
+			Port:     selection.Wireguard.EndpointPort,
+			Protocol: constants.UDP,
+			PubKey:   selection.Wireguard.PublicKey,
+		}, nil
+	}
+
 	const port = 1194
 	const protocol = constants.UDP
 	if selection.OpenVPN.TCP {

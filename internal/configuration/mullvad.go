@@ -65,7 +65,8 @@ func (settings *OpenVPNSelection) readMullvad(env params.Interface) (err error) 
 }
 
 func (settings *WireguardSelection) readMullvad(env params.Interface) (err error) {
-	settings.EndpointPort, err = readWireguardCustomPort(env, nil)
+	const portCompulsory = false
+	settings.EndpointPort, err = readWireguardEndpointPort(env, nil, portCompulsory)
 	if err != nil {
 		return err
 	}

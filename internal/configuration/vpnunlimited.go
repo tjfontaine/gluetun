@@ -42,7 +42,13 @@ func (settings *Provider) readVPNUnlimited(r reader) (err error) {
 		return fmt.Errorf("environment variable STREAM_ONLY: %w", err)
 	}
 
-	return settings.ServerSelection.OpenVPN.readProtocolOnly(r.env)
+	if settings.ServerSelection.VPN == constants.OpenVPN {
+		err = settings.ServerSelection.OpenVPN.readProtocolOnly(r.env)
+	} else {
+		err = settings.ServerSelection.Wireguard.readVPNUnlimited(r.env)
+	}
+
+	return err
 }
 
 func (settings *OpenVPN) readVPNUnlimited(r reader) (err error) {
@@ -54,6 +60,27 @@ func (settings *OpenVPN) readVPNUnlimited(r reader) (err error) {
 	settings.ClientCrt, err = readClientCertificate(r)
 	if err != nil {
 		return fmt.Errorf("%w: %s", errClientCert, err)
+	}
+
+	return nil
+}
+
+func (settings *WireguardSelection) readVPNUnlimited(env params.Interface) (err error) {
+	settings.PublicKey, err = env.Get("WIREGUARD_PUBLIC_KEY",
+		params.CaseSensitiveValue(), params.Compulsory())
+	if err != nil {
+		return fmt.Errorf("environment variable WIREGUARD_PUBLIC_KEY: %w", err)
+	}
+
+	settings.EndpointIP, err = readWireguardEndpointIP(env)
+	if err != nil {
+		return err
+	}
+
+	const portCompulsory = true
+	settings.EndpointPort, err = readWireguardEndpointPort(env, nil, portCompulsory)
+	if err != nil {
+		return err
 	}
 
 	return nil
