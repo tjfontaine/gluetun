@@ -35,6 +35,7 @@ type Loop struct {
 	state         state.Manager
 	// Fixed parameters
 	buildInfo     models.BuildInformation
+	gluetunDir    string
 	versionInfo   bool
 	vpnInputPorts []uint16 // TODO make changeable through stateful firewall
 	// Configurators
@@ -74,7 +75,7 @@ func NewLoop(vpnSettings settings.VPN, vpnInputPorts []uint16,
 	portForward portforward.StartStopper, starter command.Starter,
 	publicip publicip.Looper, dnsLooper dns.Looper,
 	logger logging.ParentLogger, client *http.Client,
-	buildInfo models.BuildInformation, versionInfo bool) *Loop {
+	buildInfo models.BuildInformation, gluetunDir string, versionInfo bool) *Loop {
 	start := make(chan struct{})
 	running := make(chan models.LoopStatus)
 	stop := make(chan struct{})
@@ -87,6 +88,7 @@ func NewLoop(vpnSettings settings.VPN, vpnInputPorts []uint16,
 		statusManager: statusManager,
 		state:         state,
 		buildInfo:     buildInfo,
+		gluetunDir:    gluetunDir,
 		versionInfo:   versionInfo,
 		vpnInputPorts: vpnInputPorts,
 		openvpnConf:   openvpnConf,

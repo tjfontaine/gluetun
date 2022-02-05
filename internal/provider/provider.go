@@ -50,7 +50,8 @@ type PortForwarder interface {
 		port uint16, gateway net.IP, serverName string) (err error)
 }
 
-func New(provider string, allServers models.AllServers, timeNow func() time.Time) Provider {
+func New(provider string, allServers models.AllServers,
+	gluetunDir string, timeNow func() time.Time) Provider {
 	randSource := rand.NewSource(timeNow().UnixNano())
 	switch provider {
 	case constants.Custom:
@@ -76,7 +77,7 @@ func New(provider string, allServers models.AllServers, timeNow func() time.Time
 	case constants.Privado:
 		return privado.New(allServers.Privado.Servers, randSource)
 	case constants.PrivateInternetAccess:
-		return privateinternetaccess.New(allServers.Pia.Servers, randSource, timeNow)
+		return privateinternetaccess.New(allServers.Pia.Servers, randSource, gluetunDir, timeNow)
 	case constants.Privatevpn:
 		return privatevpn.New(allServers.Privatevpn.Servers, randSource)
 	case constants.Protonvpn:

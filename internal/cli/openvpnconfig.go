@@ -6,13 +6,13 @@ import (
 	"time"
 
 	"github.com/qdm12/gluetun/internal/configuration/sources"
-	"github.com/qdm12/gluetun/internal/constants"
 	"github.com/qdm12/gluetun/internal/provider"
 	"github.com/qdm12/gluetun/internal/storage"
 )
 
 type OpenvpnConfigMaker interface {
-	OpenvpnConfig(logger OpenvpnConfigLogger, source sources.Source) error
+	OpenvpnConfig(logger OpenvpnConfigLogger, source sources.Source,
+		gluetunDir string) (err error)
 }
 
 type OpenvpnConfigLogger interface {
@@ -20,8 +20,9 @@ type OpenvpnConfigLogger interface {
 	Warn(s string)
 }
 
-func (c *CLI) OpenvpnConfig(logger OpenvpnConfigLogger, source sources.Source) error {
-	storage, err := storage.New(logger, constants.ServersData)
+func (c *CLI) OpenvpnConfig(logger OpenvpnConfigLogger, source sources.Source,
+	gluetunDir string) (err error) {
+	storage, err := storage.New(logger, gluetunDir)
 	if err != nil {
 		return err
 	}
@@ -36,7 +37,7 @@ func (c *CLI) OpenvpnConfig(logger OpenvpnConfigLogger, source sources.Source) e
 		return err
 	}
 
-	providerConf := provider.New(*allSettings.VPN.Provider.Name, allServers, time.Now)
+	providerConf := provider.New(*allSettings.VPN.Provider.Name, allServers, gluetunDir, time.Now)
 	connection, err := providerConf.GetConnection(allSettings.VPN.Provider.ServerSelection)
 	if err != nil {
 		return err

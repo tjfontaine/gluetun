@@ -82,14 +82,20 @@ func main() {
 	cli := cli.New()
 	cmder := command.NewCmder()
 
+	gluetunDir, err := files.FindGluetunDir()
+	if err != nil {
+		logger.Error("cannot find gluetun directory: " + err.Error())
+		os.Exit(1)
+	}
+
 	envReader := env.New(logger)
-	filesReader := files.New()
+	filesReader := files.New(gluetunDir)
 	secretsReader := secrets.New()
 	muxReader := mux.New(envReader, filesReader, secretsReader)
 
 	errorCh := make(chan error)
 	go func() {
-		errorCh <- _main(ctx, buildInfo, args, logger, muxReader, tun, netLinker, cmder, cli)
+		errorCh <- _main(ctx, buildInfo, args, gluetunDir, logger, muxReader, tun, netLinker, cmder, cli)
 	}()
 
 	select {
@@ -129,21 +135,21 @@ var (
 
 //nolint:gocognit,gocyclo
 func _main(ctx context.Context, buildInfo models.BuildInformation,
-	args []string, logger logging.ParentLogger, source sources.Source,
-	tun tun.Interface, netLinker netlink.NetLinker, cmder command.RunStarter,
-	cli cli.CLIer) error {
+	args []string, gluetunDir string, logger logging.ParentLogger,
+	source sources.Source, tun tun.Interface, netLinker netlink.NetLinker,
+	cmder command.RunStarter, cli cli.CLIer) error {
 	if len(args) > 1 { // cli operation
 		switch args[1] {
 		case "healthcheck":
 			return cli.HealthCheck(ctx, source, logger)
 		case "clientkey":
-			return cli.ClientKey(args[2:])
+			return cli.ClientKey(args[2:], gluetunDir)
 		case "openvpnconfig":
-			return cli.OpenvpnConfig(logger, source)
+			return cli.OpenvpnConfig(logger, source, gluetunDir)
 		case "update":
-			return cli.Update(ctx, args[2:], logger)
+			return cli.Update(ctx, args[2:], gluetunDir, logger)
 		case "format-servers":
-			return cli.FormatServers(args[2:])
+			return cli.FormatServers(args[2:], gluetunDir)
 		default:
 			return fmt.Errorf("%w: %s", errCommandUnknown, args[1])
 		}
@@ -177,7 +183,7 @@ func _main(ctx context.Context, buildInfo models.BuildInformation,
 
 	// TODO run this in a loop or in openvpn to reload from file without restarting
 	storageLogger := logger.NewChild(logging.Settings{Prefix: "storage: "})
-	storage, err := storage.New(storageLogger, constants.ServersData)
+	storage, err := storage.New(storageLogger, gluetunDir)
 	if err != nil {
 		return err
 	}
@@ -227,9 +233,6 @@ func _main(ctx context.Context, buildInfo models.BuildInformation,
 	logger.Info(allSettings.String())
 
 	if err := os.MkdirAll("/tmp/gluetun", 0644); err != nil {
-		return err
-	}
-	if err := os.MkdirAll("/gluetun", 0644); err != nil {
 		return err
 	}
 
@@ -386,7 +389,7 @@ func _main(ctx context.Context, buildInfo models.BuildInformation,
 	vpnLooper := vpn.NewLoop(allSettings.VPN, allSettings.Firewall.VPNInputPorts,
 		allServers, ovpnConf, netLinker, firewallConf, routingConf, portForwardLooper,
 		cmder, publicIPLooper, unboundLooper, vpnLogger, httpClient,
-		buildInfo, *allSettings.Version.Enabled)
+		buildInfo, gluetunDir, *allSettings.Version.Enabled)
 	vpnHandler, vpnCtx, vpnDone := goshutdown.NewGoRoutineHandler(
 		"vpn", goroutine.OptionTimeout(time.Second))
 	go vpnLooper.Run(vpnCtx, vpnDone)

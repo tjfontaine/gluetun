@@ -29,7 +29,8 @@ var (
 )
 
 type Updater interface {
-	Update(ctx context.Context, args []string, logger UpdaterLogger) error
+	Update(ctx context.Context, args []string,
+		gluetunDir string, logger UpdaterLogger) error
 }
 
 type UpdaterLogger interface {
@@ -40,7 +41,8 @@ type UpdaterLogger interface {
 
 func boolPtr(b bool) *bool { return &b }
 
-func (c *CLI) Update(ctx context.Context, args []string, logger UpdaterLogger) error {
+func (c *CLI) Update(ctx context.Context, args []string,
+	gluetunDir string, logger UpdaterLogger) error {
 	options := settings.Updater{CLI: boolPtr(true)}
 	var endUserMode, maintainerMode, updateAll bool
 	var dnsAddress, csvProviders string
@@ -88,7 +90,7 @@ func (c *CLI) Update(ctx context.Context, args []string, logger UpdaterLogger) e
 	const clientTimeout = 10 * time.Second
 	httpClient := &http.Client{Timeout: clientTimeout}
 
-	storage, err := storage.New(logger, constants.ServersData)
+	storage, err := storage.New(logger, gluetunDir)
 	if err != nil {
 		return fmt.Errorf("%w: %s", ErrNewStorage, err)
 	}

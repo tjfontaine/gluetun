@@ -7,12 +7,11 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/qdm12/gluetun/internal/constants"
 	"github.com/qdm12/gluetun/internal/storage"
 )
 
 type ServersFormatter interface {
-	FormatServers(args []string) error
+	FormatServers(args []string, gluetunDir string) error
 }
 
 var (
@@ -23,7 +22,7 @@ var (
 	ErrCloseOutputFile     = errors.New("cannot close output file")
 )
 
-func (c *CLI) FormatServers(args []string) error {
+func (c *CLI) FormatServers(args []string, gluetunDir string) error {
 	var format, output string
 	var cyberghost, expressvpn, fastestvpn, hideMyAss, ipvanish, ivpn, mullvad,
 		nordvpn, perfectPrivacy, pia, privado, privatevpn, protonvpn, purevpn, surfshark,
@@ -60,7 +59,7 @@ func (c *CLI) FormatServers(args []string) error {
 	}
 
 	logger := newNoopLogger()
-	storage, err := storage.New(logger, constants.ServersData)
+	storage, err := storage.New(logger, gluetunDir)
 	if err != nil {
 		return fmt.Errorf("%w: %s", ErrNewStorage, err)
 	}

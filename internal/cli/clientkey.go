@@ -5,18 +5,21 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"path/filepath"
 	"strings"
 
 	"github.com/qdm12/gluetun/internal/configuration/sources/files"
 )
 
 type ClientKeyFormatter interface {
-	ClientKey(args []string) error
+	ClientKey(args []string, gluetunDir string) error
 }
 
-func (c *CLI) ClientKey(args []string) error {
+func (c *CLI) ClientKey(args []string, gluetunDir string) error {
+	defaultFilepath := filepath.Join(gluetunDir, files.OpenVPNClientKeyRelPath)
+
 	flagSet := flag.NewFlagSet("clientkey", flag.ExitOnError)
-	filepath := flagSet.String("path", files.OpenVPNClientKeyPath, "file path to the client.key file")
+	filepath := flagSet.String("path", defaultFilepath, "file path to the OpenVPN key file")
 	if err := flagSet.Parse(args); err != nil {
 		return err
 	}

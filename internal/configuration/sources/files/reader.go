@@ -7,14 +7,18 @@ import (
 
 var _ sources.Source = (*Reader)(nil)
 
-type Reader struct{}
+type Reader struct {
+	gluetunDir string
+}
 
-func New() *Reader {
-	return &Reader{}
+func New(gluetunDir string) *Reader {
+	return &Reader{
+		gluetunDir: gluetunDir,
+	}
 }
 
 func (r *Reader) Read() (settings settings.Settings, err error) {
-	settings.VPN, err = r.readVPN()
+	settings.VPN, err = r.readVPN(r.gluetunDir)
 	if err != nil {
 		return settings, err
 	}
