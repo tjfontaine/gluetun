@@ -177,12 +177,12 @@ func _main(ctx context.Context, buildInfo models.BuildInformation,
 
 	// TODO run this in a loop or in openvpn to reload from file without restarting
 	storageLogger := logger.NewChild(logging.Settings{Prefix: "storage: "})
-	storage, err := storage.New(storageLogger, constants.ServersData)
-	if err != nil {
-		return err
-	}
+	storage := storage.New(storageLogger)
 
-	allServers := storage.GetServers()
+	allServers, err := storage.Init(constants.ServersData)
+	if err != nil {
+		return fmt.Errorf("cannot get servers data: %w", err)
+	}
 
 	err = allSettings.Validate(allServers)
 	if err != nil {
@@ -248,6 +248,11 @@ func _main(ctx context.Context, buildInfo models.BuildInformation,
 
 	if err := os.Chown("/etc/unbound", puid, pgid); err != nil {
 		return err
+	}
+
+	serversUpdater, err := updater.New(allSettings.Updater, httpClient, allServers, logger)
+	if err != nil {
+		return fmt.Errorf("cannot create updater: %w", err)
 	}
 
 	firewallLogLevel := *allSettings.Log.Level
@@ -392,7 +397,7 @@ func _main(ctx context.Context, buildInfo models.BuildInformation,
 	go vpnLooper.Run(vpnCtx, vpnDone)
 
 	updaterLooper := updater.NewLooper(allSettings.Updater,
-		allServers, storage, vpnLooper.SetServers, httpClient,
+		serversUpdater, storage,
 		logger.NewChild(logging.Settings{Prefix: "updater: "}))
 	updaterHandler, updaterCtx, updaterDone := goshutdown.NewGoRoutineHandler(
 		"updater", goroutine.OptionTimeout(defaultShutdownTimeout))

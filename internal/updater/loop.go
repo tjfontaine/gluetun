@@ -2,7 +2,6 @@ package updater
 
 import (
 	"context"
-	"net/http"
 	"sync"
 	"time"
 
@@ -25,10 +24,9 @@ type Looper interface {
 type looper struct {
 	state state
 	// Objects
-	updater       Updater
-	flusher       storage.Flusher
-	setAllServers func(allServers models.AllServers)
-	logger        infoErrorer
+	updater ServerUpdater
+	flusher storage.Flusher
+	logger  infoErrorer
 	// Internal channels and locks
 	loopLock     sync.Mutex
 	start        chan struct{}
@@ -44,26 +42,24 @@ type looper struct {
 
 const defaultBackoffTime = 5 * time.Second
 
-func NewLooper(settings settings.Updater, currentServers models.AllServers,
-	flusher storage.Flusher, setAllServers func(allServers models.AllServers),
-	client *http.Client, logger Logger) Looper {
+func NewLooper(settings settings.Updater, updater ServerUpdater,
+	flusher storage.Flusher, logger Logger) Looper {
 	return &looper{
 		state: state{
 			status:   constants.Stopped,
 			settings: settings,
 		},
-		updater:       New(settings, client, currentServers, logger),
-		flusher:       flusher,
-		setAllServers: setAllServers,
-		logger:        logger,
-		start:         make(chan struct{}),
-		running:       make(chan models.LoopStatus),
-		stop:          make(chan struct{}),
-		stopped:       make(chan struct{}),
-		updateTicker:  make(chan struct{}),
-		timeNow:       time.Now,
-		timeSince:     time.Since,
-		backoffTime:   defaultBackoffTime,
+		updater:      updater,
+		flusher:      flusher,
+		logger:       logger,
+		start:        make(chan struct{}),
+		running:      make(chan models.LoopStatus),
+		stop:         make(chan struct{}),
+		stopped:      make(chan struct{}),
+		updateTicker: make(chan struct{}),
+		timeNow:      time.Now,
+		timeSince:    time.Since,
+		backoffTime:  defaultBackoffTime,
 	}
 }
 
@@ -138,8 +134,8 @@ func (l *looper) Run(ctx context.Context, done chan<- struct{}) {
 				runWg.Wait()
 				l.stopped <- struct{}{}
 			case servers := <-serversCh:
-				l.setAllServers(servers)
-				if err := l.flusher.FlushToFile(servers); err != nil {
+				err := l.flusher.FlushToFile(constants.ServersData, servers)
+				if err != nil {
 					l.logger.Error(err.Error())
 				}
 				runWg.Wait()

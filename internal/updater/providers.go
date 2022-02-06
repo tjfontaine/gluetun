@@ -3,9 +3,9 @@ package updater
 import (
 	"context"
 	"fmt"
-	"reflect"
 
 	"github.com/qdm12/gluetun/internal/constants"
+	"github.com/qdm12/gluetun/internal/models"
 	"github.com/qdm12/gluetun/internal/updater/providers/cyberghost"
 	"github.com/qdm12/gluetun/internal/updater/providers/expressvpn"
 	"github.com/qdm12/gluetun/internal/updater/providers/fastestvpn"
@@ -28,24 +28,24 @@ import (
 	"github.com/qdm12/gluetun/internal/updater/providers/windscribe"
 )
 
-func (u *updater) updateCyberghost(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.Cyberghost.Servers))
+func (u *Updater) updateCyberghost(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.Cyberghost])
 	servers, err := cyberghost.GetServers(ctx, u.presolver, minServers)
 	if err != nil {
 		return err
 	}
 
-	if reflect.DeepEqual(u.servers.Cyberghost.Servers, servers) {
+	if !u.didServersChange(constants.Cyberghost, servers) {
 		return nil
 	}
 
-	u.servers.Cyberghost.Timestamp = u.timeNow().Unix()
-	u.servers.Cyberghost.Servers = servers
+	allServers.Cyberghost.Timestamp = u.timeNow().Unix()
+	allServers.Cyberghost.Servers = servers
 	return nil
 }
 
-func (u *updater) updateExpressvpn(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.Expressvpn.Servers))
+func (u *Updater) updateExpressvpn(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.Expressvpn])
 	servers, warnings, err := expressvpn.GetServers(
 		ctx, u.unzipper, u.presolver, minServers)
 	if *u.options.CLI {
@@ -57,17 +57,17 @@ func (u *updater) updateExpressvpn(ctx context.Context) (err error) {
 		return err
 	}
 
-	if reflect.DeepEqual(u.servers.Expressvpn.Servers, servers) {
+	if !u.didServersChange(constants.Expressvpn, servers) {
 		return nil
 	}
 
-	u.servers.Expressvpn.Timestamp = u.timeNow().Unix()
-	u.servers.Expressvpn.Servers = servers
+	allServers.Expressvpn.Timestamp = u.timeNow().Unix()
+	allServers.Expressvpn.Servers = servers
 	return nil
 }
 
-func (u *updater) updateFastestvpn(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.Fastestvpn.Servers))
+func (u *Updater) updateFastestvpn(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.Fastestvpn])
 	servers, warnings, err := fastestvpn.GetServers(
 		ctx, u.unzipper, u.presolver, minServers)
 	if *u.options.CLI {
@@ -79,17 +79,17 @@ func (u *updater) updateFastestvpn(ctx context.Context) (err error) {
 		return err
 	}
 
-	if reflect.DeepEqual(u.servers.Fastestvpn.Servers, servers) {
+	if !u.didServersChange(constants.Fastestvpn, servers) {
 		return nil
 	}
 
-	u.servers.Fastestvpn.Timestamp = u.timeNow().Unix()
-	u.servers.Fastestvpn.Servers = servers
+	allServers.Fastestvpn.Timestamp = u.timeNow().Unix()
+	allServers.Fastestvpn.Servers = servers
 	return nil
 }
 
-func (u *updater) updateHideMyAss(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.HideMyAss.Servers))
+func (u *Updater) updateHideMyAss(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.HideMyAss])
 	servers, warnings, err := hidemyass.GetServers(
 		ctx, u.client, u.presolver, minServers)
 	if *u.options.CLI {
@@ -101,17 +101,17 @@ func (u *updater) updateHideMyAss(ctx context.Context) (err error) {
 		return err
 	}
 
-	if reflect.DeepEqual(u.servers.HideMyAss.Servers, servers) {
+	if !u.didServersChange(constants.HideMyAss, servers) {
 		return nil
 	}
 
-	u.servers.HideMyAss.Timestamp = u.timeNow().Unix()
-	u.servers.HideMyAss.Servers = servers
+	allServers.HideMyAss.Timestamp = u.timeNow().Unix()
+	allServers.HideMyAss.Servers = servers
 	return nil
 }
 
-func (u *updater) updateIpvanish(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.Ipvanish.Servers))
+func (u *Updater) updateIpvanish(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.Ipvanish])
 	servers, warnings, err := ipvanish.GetServers(
 		ctx, u.unzipper, u.presolver, minServers)
 	if *u.options.CLI {
@@ -123,17 +123,17 @@ func (u *updater) updateIpvanish(ctx context.Context) (err error) {
 		return err
 	}
 
-	if reflect.DeepEqual(u.servers.Ipvanish.Servers, servers) {
+	if !u.didServersChange(constants.Ipvanish, servers) {
 		return nil
 	}
 
-	u.servers.Ipvanish.Timestamp = u.timeNow().Unix()
-	u.servers.Ipvanish.Servers = servers
+	allServers.Ipvanish.Timestamp = u.timeNow().Unix()
+	allServers.Ipvanish.Servers = servers
 	return nil
 }
 
-func (u *updater) updateIvpn(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.Ivpn.Servers))
+func (u *Updater) updateIvpn(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.Ivpn])
 	servers, warnings, err := ivpn.GetServers(
 		ctx, u.client, u.presolver, minServers)
 	if *u.options.CLI {
@@ -145,33 +145,33 @@ func (u *updater) updateIvpn(ctx context.Context) (err error) {
 		return err
 	}
 
-	if reflect.DeepEqual(u.servers.Ivpn.Servers, servers) {
+	if !u.didServersChange(constants.Ivpn, servers) {
 		return nil
 	}
 
-	u.servers.Ivpn.Timestamp = u.timeNow().Unix()
-	u.servers.Ivpn.Servers = servers
+	allServers.Ivpn.Timestamp = u.timeNow().Unix()
+	allServers.Ivpn.Servers = servers
 	return nil
 }
 
-func (u *updater) updateMullvad(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.Mullvad.Servers))
+func (u *Updater) updateMullvad(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.Mullvad])
 	servers, err := mullvad.GetServers(ctx, u.client, minServers)
 	if err != nil {
 		return err
 	}
 
-	if reflect.DeepEqual(u.servers.Mullvad.Servers, servers) {
+	if !u.didServersChange(constants.Mullvad, servers) {
 		return nil
 	}
 
-	u.servers.Mullvad.Timestamp = u.timeNow().Unix()
-	u.servers.Mullvad.Servers = servers
+	allServers.Mullvad.Timestamp = u.timeNow().Unix()
+	allServers.Mullvad.Servers = servers
 	return nil
 }
 
-func (u *updater) updateNordvpn(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.Nordvpn.Servers))
+func (u *Updater) updateNordvpn(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.Nordvpn])
 	servers, warnings, err := nordvpn.GetServers(ctx, u.client, minServers)
 	if *u.options.CLI {
 		for _, warning := range warnings {
@@ -182,17 +182,17 @@ func (u *updater) updateNordvpn(ctx context.Context) (err error) {
 		return err
 	}
 
-	if reflect.DeepEqual(u.servers.Nordvpn.Servers, servers) {
+	if !u.didServersChange(constants.Nordvpn, servers) {
 		return nil
 	}
 
-	u.servers.Nordvpn.Timestamp = u.timeNow().Unix()
-	u.servers.Nordvpn.Servers = servers
+	allServers.Nordvpn.Timestamp = u.timeNow().Unix()
+	allServers.Nordvpn.Servers = servers
 	return nil
 }
 
-func (u *updater) updatePerfectprivacy(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.Perfectprivacy.Servers))
+func (u *Updater) updatePerfectprivacy(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.Perfectprivacy])
 	servers, warnings, err := perfectprivacy.GetServers(ctx, u.unzipper, minServers)
 	if *u.options.CLI {
 		for _, warning := range warnings {
@@ -203,33 +203,33 @@ func (u *updater) updatePerfectprivacy(ctx context.Context) (err error) {
 		return err
 	}
 
-	if reflect.DeepEqual(u.servers.Perfectprivacy.Servers, servers) {
+	if !u.didServersChange(constants.Perfectprivacy, servers) {
 		return nil
 	}
 
-	u.servers.Perfectprivacy.Timestamp = u.timeNow().Unix()
-	u.servers.Perfectprivacy.Servers = servers
+	allServers.Perfectprivacy.Timestamp = u.timeNow().Unix()
+	allServers.Perfectprivacy.Servers = servers
 	return nil
 }
 
-func (u *updater) updatePIA(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.Pia.Servers))
+func (u *Updater) updatePIA(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.PrivateInternetAccess])
 	servers, err := pia.GetServers(ctx, u.client, minServers)
 	if err != nil {
 		return err
 	}
 
-	if reflect.DeepEqual(u.servers.Pia.Servers, servers) {
+	if !u.didServersChange(constants.PrivateInternetAccess, servers) {
 		return nil
 	}
 
-	u.servers.Pia.Timestamp = u.timeNow().Unix()
-	u.servers.Pia.Servers = servers
+	allServers.Pia.Timestamp = u.timeNow().Unix()
+	allServers.Pia.Servers = servers
 	return nil
 }
 
-func (u *updater) updatePrivado(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.Privado.Servers))
+func (u *Updater) updatePrivado(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.Privado])
 	servers, warnings, err := privado.GetServers(
 		ctx, u.unzipper, u.client, u.presolver, minServers)
 	if *u.options.CLI {
@@ -241,17 +241,17 @@ func (u *updater) updatePrivado(ctx context.Context) (err error) {
 		return err
 	}
 
-	if reflect.DeepEqual(u.servers.Privado.Servers, servers) {
+	if !u.didServersChange(constants.Privado, servers) {
 		return nil
 	}
 
-	u.servers.Privado.Timestamp = u.timeNow().Unix()
-	u.servers.Privado.Servers = servers
+	allServers.Privado.Timestamp = u.timeNow().Unix()
+	allServers.Privado.Servers = servers
 	return nil
 }
 
-func (u *updater) updatePrivatevpn(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.Privatevpn.Servers))
+func (u *Updater) updatePrivatevpn(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.Privatevpn])
 	servers, warnings, err := privatevpn.GetServers(
 		ctx, u.unzipper, u.presolver, minServers)
 	if *u.options.CLI {
@@ -263,17 +263,17 @@ func (u *updater) updatePrivatevpn(ctx context.Context) (err error) {
 		return err
 	}
 
-	if reflect.DeepEqual(u.servers.Privatevpn.Servers, servers) {
+	if !u.didServersChange(constants.Privatevpn, servers) {
 		return nil
 	}
 
-	u.servers.Privatevpn.Timestamp = u.timeNow().Unix()
-	u.servers.Privatevpn.Servers = servers
+	allServers.Privatevpn.Timestamp = u.timeNow().Unix()
+	allServers.Privatevpn.Servers = servers
 	return nil
 }
 
-func (u *updater) updateProtonvpn(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.Privatevpn.Servers))
+func (u *Updater) updateProtonvpn(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.Privatevpn])
 	servers, warnings, err := protonvpn.GetServers(ctx, u.client, minServers)
 	if *u.options.CLI {
 		for _, warning := range warnings {
@@ -284,17 +284,17 @@ func (u *updater) updateProtonvpn(ctx context.Context) (err error) {
 		return err
 	}
 
-	if reflect.DeepEqual(u.servers.Protonvpn.Servers, servers) {
+	if !u.didServersChange(constants.Protonvpn, servers) {
 		return nil
 	}
 
-	u.servers.Protonvpn.Timestamp = u.timeNow().Unix()
-	u.servers.Protonvpn.Servers = servers
+	allServers.Protonvpn.Timestamp = u.timeNow().Unix()
+	allServers.Protonvpn.Servers = servers
 	return nil
 }
 
-func (u *updater) updatePurevpn(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.Purevpn.Servers))
+func (u *Updater) updatePurevpn(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.Purevpn])
 	servers, warnings, err := purevpn.GetServers(
 		ctx, u.client, u.unzipper, u.presolver, minServers)
 	if *u.options.CLI {
@@ -306,17 +306,17 @@ func (u *updater) updatePurevpn(ctx context.Context) (err error) {
 		return fmt.Errorf("cannot update Purevpn servers: %w", err)
 	}
 
-	if reflect.DeepEqual(u.servers.Purevpn.Servers, servers) {
+	if !u.didServersChange(constants.Purevpn, servers) {
 		return nil
 	}
 
-	u.servers.Purevpn.Timestamp = u.timeNow().Unix()
-	u.servers.Purevpn.Servers = servers
+	allServers.Purevpn.Timestamp = u.timeNow().Unix()
+	allServers.Purevpn.Servers = servers
 	return nil
 }
 
-func (u *updater) updateSurfshark(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.Surfshark.Servers))
+func (u *Updater) updateSurfshark(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.Surfshark])
 	servers, warnings, err := surfshark.GetServers(
 		ctx, u.unzipper, u.client, u.presolver, minServers)
 	if *u.options.CLI {
@@ -328,17 +328,17 @@ func (u *updater) updateSurfshark(ctx context.Context) (err error) {
 		return err
 	}
 
-	if reflect.DeepEqual(u.servers.Surfshark.Servers, servers) {
+	if !u.didServersChange(constants.Surfshark, servers) {
 		return nil
 	}
 
-	u.servers.Surfshark.Timestamp = u.timeNow().Unix()
-	u.servers.Surfshark.Servers = servers
+	allServers.Surfshark.Timestamp = u.timeNow().Unix()
+	allServers.Surfshark.Servers = servers
 	return nil
 }
 
-func (u *updater) updateTorguard(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.Torguard.Servers))
+func (u *Updater) updateTorguard(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.Torguard])
 	servers, warnings, err := torguard.GetServers(
 		ctx, u.unzipper, u.presolver, minServers)
 	if *u.options.CLI {
@@ -350,17 +350,17 @@ func (u *updater) updateTorguard(ctx context.Context) (err error) {
 		return err
 	}
 
-	if reflect.DeepEqual(u.servers.Torguard.Servers, servers) {
+	if !u.didServersChange(constants.Torguard, servers) {
 		return nil
 	}
 
-	u.servers.Torguard.Timestamp = u.timeNow().Unix()
-	u.servers.Torguard.Servers = servers
+	allServers.Torguard.Timestamp = u.timeNow().Unix()
+	allServers.Torguard.Servers = servers
 	return nil
 }
 
-func (u *updater) updateVPNUnlimited(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.VPNUnlimited.Servers))
+func (u *Updater) updateVPNUnlimited(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.VPNUnlimited])
 	servers, warnings, err := vpnunlimited.GetServers(
 		ctx, u.unzipper, u.presolver, minServers)
 	if *u.options.CLI {
@@ -372,17 +372,17 @@ func (u *updater) updateVPNUnlimited(ctx context.Context) (err error) {
 		return err
 	}
 
-	if reflect.DeepEqual(u.servers.VPNUnlimited.Servers, servers) {
+	if !u.didServersChange(constants.VPNUnlimited, servers) {
 		return nil
 	}
 
-	u.servers.VPNUnlimited.Timestamp = u.timeNow().Unix()
-	u.servers.VPNUnlimited.Servers = servers
+	allServers.VPNUnlimited.Timestamp = u.timeNow().Unix()
+	allServers.VPNUnlimited.Servers = servers
 	return nil
 }
 
-func (u *updater) updateVyprvpn(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.Vyprvpn.Servers))
+func (u *Updater) updateVyprvpn(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.Vyprvpn])
 	servers, warnings, err := vyprvpn.GetServers(
 		ctx, u.unzipper, u.presolver, minServers)
 	if *u.options.CLI {
@@ -394,17 +394,17 @@ func (u *updater) updateVyprvpn(ctx context.Context) (err error) {
 		return err
 	}
 
-	if reflect.DeepEqual(u.servers.Vyprvpn.Servers, servers) {
+	if !u.didServersChange(constants.Vyprvpn, servers) {
 		return nil
 	}
 
-	u.servers.Vyprvpn.Timestamp = u.timeNow().Unix()
-	u.servers.Vyprvpn.Servers = servers
+	allServers.Vyprvpn.Timestamp = u.timeNow().Unix()
+	allServers.Vyprvpn.Servers = servers
 	return nil
 }
 
-func (u *updater) updateWevpn(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.Wevpn.Servers))
+func (u *Updater) updateWevpn(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.Wevpn])
 	servers, warnings, err := wevpn.GetServers(ctx, u.presolver, minServers)
 	if *u.options.CLI {
 		for _, warning := range warnings {
@@ -415,32 +415,42 @@ func (u *updater) updateWevpn(ctx context.Context) (err error) {
 		return err
 	}
 
-	if reflect.DeepEqual(u.servers.Wevpn.Servers, servers) {
+	if !u.didServersChange(constants.Wevpn, servers) {
 		return nil
 	}
 
-	u.servers.Wevpn.Timestamp = u.timeNow().Unix()
-	u.servers.Wevpn.Servers = servers
+	allServers.Wevpn.Timestamp = u.timeNow().Unix()
+	allServers.Wevpn.Servers = servers
 	return nil
 }
 
-func (u *updater) updateWindscribe(ctx context.Context) (err error) {
-	minServers := getMinServers(len(u.servers.Windscribe.Servers))
+func (u *Updater) updateWindscribe(ctx context.Context, allServers *models.AllServers) (err error) {
+	minServers := getMinServers(u.vpnProviderData[constants.Windscribe])
 	servers, err := windscribe.GetServers(ctx, u.client, minServers)
 	if err != nil {
 		return err
 	}
 
-	if reflect.DeepEqual(u.servers.Windscribe.Servers, servers) {
+	if !u.didServersChange(constants.Windscribe, servers) {
 		return nil
 	}
 
-	u.servers.Windscribe.Timestamp = u.timeNow().Unix()
-	u.servers.Windscribe.Servers = servers
+	allServers.Windscribe.Timestamp = u.timeNow().Unix()
+	allServers.Windscribe.Servers = servers
 	return nil
 }
 
-func getMinServers(existingServers int) (minServers int) {
+func getMinServers(serversData serversData) (minServers int) {
+	serversCount := serversData.serversCount
 	const minRatio = 0.8
-	return int(minRatio * float64(existingServers))
+	return int(minRatio * float64(serversCount))
+}
+
+func (u *Updater) didServersChange(vpnProvider string, servers interface{}) (changed bool) {
+	previousHexDigest := u.vpnProviderData[vpnProvider].serversHexDigest
+	currentHexDigest, err := hashServers(servers)
+	if err != nil {
+		panic(err)
+	}
+	return previousHexDigest != currentHexDigest
 }

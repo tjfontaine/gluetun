@@ -2,38 +2,30 @@
 package storage
 
 import (
+	"fmt"
+
 	"github.com/qdm12/gluetun/internal/models"
 )
 
-//go:generate mockgen -destination=infoerrorer_mock_test.go -package $GOPACKAGE . InfoErrorer
+//go:generate mockgen -destination=infoer_mock_test.go -package $GOPACKAGE . Infoer
 
 type Storage struct {
-	mergedServers    models.AllServers
-	hardcodedServers models.AllServers
-	logger           InfoErrorer
-	filepath         string
+	logger Infoer
 }
 
-type InfoErrorer interface {
-	Info(s string)
+func New(logger Infoer) (storage *Storage) {
+	return &Storage{
+		logger: logger,
+	}
 }
 
-// New creates a new storage and reads the servers from the
-// embedded servers file and the file on disk.
-// Passing an empty filepath disables writing servers to a file.
-func New(logger InfoErrorer, filepath string) (storage *Storage, err error) {
-	// error returned covered by unit test
-	harcodedServers, _ := parseHardcodedServers()
-
-	storage = &Storage{
-		hardcodedServers: harcodedServers,
-		logger:           logger,
-		filepath:         filepath,
+func (s *Storage) Init(serversFilepath string) (servers models.AllServers, err error) {
+	servers, err = s.GetServers(serversFilepath)
+	if err != nil {
+		return servers, fmt.Errorf("cannot get servers: %w", err)
 	}
 
-	if err := storage.SyncServers(); err != nil {
-		return nil, err
-	}
+	s.logger = newNoopInfoer()
 
-	return storage, nil
+	return servers, nil
 }

@@ -21,11 +21,12 @@ type OpenvpnConfigLogger interface {
 }
 
 func (c *CLI) OpenvpnConfig(logger OpenvpnConfigLogger, source sources.Source) error {
-	storage, err := storage.New(logger, constants.ServersData)
+	storage := storage.New(logger)
+
+	allServers, err := storage.GetServers(constants.ServersData)
 	if err != nil {
-		return err
+		return fmt.Errorf("cannot get servers from storage: %w", err)
 	}
-	allServers := storage.GetServers()
 
 	allSettings, err := source.Read()
 	if err != nil {

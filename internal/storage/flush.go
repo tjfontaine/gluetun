@@ -11,11 +11,11 @@ import (
 var _ Flusher = (*Storage)(nil)
 
 type Flusher interface {
-	FlushToFile(allServers models.AllServers) error
+	FlushToFile(path string, allServers models.AllServers) error
 }
 
-func (s *Storage) FlushToFile(allServers models.AllServers) error {
-	return flushToFile(s.filepath, allServers)
+func (s *Storage) FlushToFile(path string, allServers models.AllServers) error {
+	return flushToFile(path, allServers)
 }
 
 func flushToFile(path string, servers models.AllServers) error {
@@ -28,11 +28,13 @@ func flushToFile(path string, servers models.AllServers) error {
 	if err != nil {
 		return err
 	}
+
 	encoder := json.NewEncoder(file)
 	encoder.SetIndent("", "  ")
 	if err := encoder.Encode(servers); err != nil {
 		_ = file.Close()
 		return err
 	}
+
 	return file.Close()
 }

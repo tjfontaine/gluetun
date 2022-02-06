@@ -23,7 +23,6 @@ var (
 	ErrModeUnspecified         = errors.New("at least one of -enduser or -maintainer must be specified")
 	ErrDNSAddress              = errors.New("DNS address is not valid")
 	ErrNoProviderSpecified     = errors.New("no provider was specified")
-	ErrNewStorage              = errors.New("cannot create storage")
 	ErrUpdateServerInformation = errors.New("cannot update server information")
 	ErrWriteToFile             = errors.New("cannot write updated information to file")
 )
@@ -88,26 +87,33 @@ func (c *CLI) Update(ctx context.Context, args []string, logger UpdaterLogger) e
 	const clientTimeout = 10 * time.Second
 	httpClient := &http.Client{Timeout: clientTimeout}
 
-	storage, err := storage.New(logger, constants.ServersData)
-	if err != nil {
-		return fmt.Errorf("%w: %s", ErrNewStorage, err)
-	}
-	currentServers := storage.GetServers()
+	storage := storage.New(logger)
 
-	updater := updater.New(options, httpClient, currentServers, logger)
+	currentServers, err := storage.GetServers(constants.ServersData)
+	if err != nil {
+		return fmt.Errorf("cannot get servers data from storage: %w", err)
+	}
+
+	updater, err := updater.New(options, httpClient, currentServers, logger)
+	if err != nil {
+		return fmt.Errorf("cannot init servers storage: %w", err)
+	}
+
 	allServers, err := updater.UpdateServers(ctx)
 	if err != nil {
 		return fmt.Errorf("%w: %s", ErrUpdateServerInformation, err)
 	}
 
 	if endUserMode {
-		if err := storage.FlushToFile(allServers); err != nil {
+		err := storage.FlushToFile(constants.ServersData, allServers)
+		if err != nil {
 			return fmt.Errorf("%w: %s", ErrWriteToFile, err)
 		}
 	}
 
 	if maintainerMode {
-		if err := writeToEmbeddedJSON(c.repoServersPath, allServers); err != nil {
+		err := writeToEmbeddedJSON(c.repoServersPath, allServers)
+		if err != nil {
 			return fmt.Errorf("%w: %s", ErrWriteToFile, err)
 		}
 	}

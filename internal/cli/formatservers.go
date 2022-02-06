@@ -60,11 +60,11 @@ func (c *CLI) FormatServers(args []string) error {
 	}
 
 	logger := newNoopLogger()
-	storage, err := storage.New(logger, constants.ServersData)
+	storage := storage.New(logger)
+	currentServers, err := storage.GetServers(constants.ServersData)
 	if err != nil {
-		return fmt.Errorf("%w: %s", ErrNewStorage, err)
+		return fmt.Errorf("cannot get servers from storage: %w", err)
 	}
-	currentServers := storage.GetServers()
 
 	var formatted string
 	switch {
