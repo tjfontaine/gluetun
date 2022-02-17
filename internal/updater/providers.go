@@ -24,6 +24,7 @@ import (
 	purevpn "github.com/qdm12/gluetun/internal/provider/purevpn/updater"
 	surfshark "github.com/qdm12/gluetun/internal/provider/surfshark/updater"
 	torguard "github.com/qdm12/gluetun/internal/provider/torguard/updater"
+	vpnsecure "github.com/qdm12/gluetun/internal/provider/vpnsecure/updater"
 	vpnunlimited "github.com/qdm12/gluetun/internal/provider/vpnunlimited/updater"
 	vyprvpn "github.com/qdm12/gluetun/internal/provider/vyprvpn/updater"
 	wevpn "github.com/qdm12/gluetun/internal/provider/wevpn/updater"
@@ -87,6 +88,8 @@ func (u *updater) getServers(ctx context.Context, provider string,
 		return surfshark.GetServers(ctx, u.unzipper, u.client, u.presolver, minServers)
 	case providers.Torguard:
 		return torguard.GetServers(ctx, u.unzipper, u.presolver, minServers)
+	case providers.VPNSecure:
+		return vpnsecure.GetServers(ctx, u.client, u.presolver, minServers)
 	case providers.VPNUnlimited:
 		return vpnunlimited.GetServers(ctx, u.unzipper, u.presolver, minServers)
 	case providers.Vyprvpn:

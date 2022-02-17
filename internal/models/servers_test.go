@@ -40,6 +40,7 @@ func Test_AllServers_MarshalJSON(t *testing.T) {
 				`"purevpn":{"version":0,"timestamp":0},` +
 				`"surfshark":{"version":0,"timestamp":0},` +
 				`"torguard":{"version":0,"timestamp":0},` +
+				`"vpn secure":{"version":0,"timestamp":0},` +
 				`"vpn unlimited":{"version":0,"timestamp":0},` +
 				`"vyprvpn":{"version":0,"timestamp":0},` +
 				`"wevpn":{"version":0,"timestamp":0},` +
@@ -84,6 +85,7 @@ func Test_AllServers_MarshalJSON(t *testing.T) {
 				`"purevpn":{"version":0,"timestamp":0},` +
 				`"surfshark":{"version":0,"timestamp":0},` +
 				`"torguard":{"version":0,"timestamp":0},` +
+				`"vpn secure":{"version":0,"timestamp":0},` +
 				`"vpn unlimited":{"version":0,"timestamp":0},` +
 				`"vyprvpn":{"version":0,"timestamp":0},` +
 				`"wevpn":{"version":0,"timestamp":0},` +

@@ -23,6 +23,7 @@ type Server struct {
 	WgPubKey    string   `json:"wgpubkey,omitempty"`
 	Free        bool     `json:"free,omitempty"`
 	Stream      bool     `json:"stream,omitempty"`
+	Premium     bool     `json:"premium,omitempty"`
 	PortForward bool     `json:"port_forward,omitempty"`
 	IPs         []net.IP `json:"ips,omitempty"`
 }
