@@ -121941,7 +121941,7 @@
   },
   "vyprvpn": {
     "version": 3,
-    "timestamp": 1627008363,
+    "timestamp": 1653865254,
     "servers": [
       {
         "vpn": "openvpn",
@@ -121949,7 +121949,16 @@
         "hostname": "dz1.vyprvpn.com",
         "udp": true,
         "ips": [
-          "209.99.75.20"
+          "185.29.164.22"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Algeria",
+        "hostname": "dz1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "185.29.164.23"
         ]
       },
       {
@@ -121963,11 +121972,38 @@
       },
       {
         "vpn": "openvpn",
+        "region": "Argentina",
+        "hostname": "ar1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.109.35"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "Australia Melbourne",
         "hostname": "au2.vyprvpn.com",
         "udp": true,
         "ips": [
           "209.99.117.19"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Australia Melbourne",
+        "hostname": "au2.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.117.27"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Australia Perth",
+        "hostname": "au3.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.1.27"
         ]
       },
       {
@@ -121982,10 +122018,28 @@
       {
         "vpn": "openvpn",
         "region": "Australia Sydney",
+        "hostname": "au1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.117.21"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Australia Sydney",
         "hostname": "au1.vyprvpn.com",
         "udp": true,
         "ips": [
           "209.99.117.18"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Austria",
+        "hostname": "at1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.19"
         ]
       },
       {
@@ -122003,7 +122057,16 @@
         "hostname": "bh1.vyprvpn.com",
         "udp": true,
         "ips": [
-          "209.99.115.19"
+          "185.29.164.32"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Bahrain",
+        "hostname": "bh1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "185.29.164.33"
         ]
       },
       {
@@ -122017,11 +122080,29 @@
       },
       {
         "vpn": "openvpn",
+        "region": "Belgium",
+        "hostname": "be1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.21"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "Brazil",
         "hostname": "br1.vyprvpn.com",
         "udp": true,
         "ips": [
           "209.99.109.20"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Brazil",
+        "hostname": "br1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.109.33"
         ]
       },
       {
@@ -122035,11 +122116,38 @@
       },
       {
         "vpn": "openvpn",
+        "region": "Bulgaria",
+        "hostname": "bg1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.23"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "Canada",
         "hostname": "ca1.vyprvpn.com",
         "udp": true,
         "ips": [
           "209.99.21.18"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Canada",
+        "hostname": "ca1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.21.35"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Columbia",
+        "hostname": "co1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.109.37"
         ]
       },
       {
@@ -122062,6 +122170,24 @@
       },
       {
         "vpn": "openvpn",
+        "region": "Costa Rica",
+        "hostname": "cr1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.109.39"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Czech Republic",
+        "hostname": "cz1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.25"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "Czech Republic",
         "hostname": "cz1.vyprvpn.com",
         "udp": true,
@@ -122080,11 +122206,29 @@
       },
       {
         "vpn": "openvpn",
+        "region": "Denmark",
+        "hostname": "dk1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.29"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Dubai",
+        "hostname": "ae1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "185.29.164.31"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "Dubai",
         "hostname": "ae1.vyprvpn.com",
         "udp": true,
         "ips": [
-          "128.90.45.104"
+          "185.29.164.30"
         ]
       },
       {
@@ -122093,7 +122237,16 @@
         "hostname": "eg1.vyprvpn.com",
         "udp": true,
         "ips": [
-          "209.99.75.21"
+          "185.29.164.24"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Egypt",
+        "hostname": "eg1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "185.29.164.25"
         ]
       },
       {
@@ -122103,6 +122256,24 @@
         "udp": true,
         "ips": [
           "209.99.61.20"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "El Salvador",
+        "hostname": "sv1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.61.36"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Finland",
+        "hostname": "fi1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.33"
         ]
       },
       {
@@ -122117,10 +122288,28 @@
       {
         "vpn": "openvpn",
         "region": "France",
+        "hostname": "fr1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.35"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "France",
         "hostname": "fr1.vyprvpn.com",
         "udp": true,
         "ips": [
           "128.90.96.34"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Germany",
+        "hostname": "de1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.27"
         ]
       },
       {
@@ -122138,7 +122327,16 @@
         "hostname": "gr1.vyprvpn.com",
         "udp": true,
         "ips": [
-          "209.99.75.22"
+          "185.29.164.26"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Greece",
+        "hostname": "gr1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "185.29.164.27"
         ]
       },
       {
@@ -122147,7 +122345,16 @@
         "hostname": "hk1.vyprvpn.com",
         "udp": true,
         "ips": [
-          "128.90.227.18"
+          "209.99.1.36"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Hong Kong",
+        "hostname": "hk1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.1.37"
         ]
       },
       {
@@ -122161,11 +122368,38 @@
       },
       {
         "vpn": "openvpn",
+        "region": "Iceland",
+        "hostname": "is1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.22.31"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "India",
         "hostname": "in1.vyprvpn.com",
         "udp": true,
         "ips": [
-          "209.99.115.20"
+          "185.29.164.34"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "India",
+        "hostname": "in1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "185.29.164.35"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Indonesia",
+        "hostname": "id1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.1.28"
         ]
       },
       {
@@ -122180,6 +122414,15 @@
       {
         "vpn": "openvpn",
         "region": "Ireland",
+        "hostname": "ie1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.22.29"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Ireland",
         "hostname": "ie1.vyprvpn.com",
         "udp": true,
         "ips": [
@@ -122189,10 +122432,19 @@
       {
         "vpn": "openvpn",
         "region": "Israel",
+        "hostname": "il1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "185.29.164.21"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Israel",
         "hostname": "il1.vyprvpn.com",
         "udp": true,
         "ips": [
-          "209.99.75.18"
+          "185.29.164.20"
         ]
       },
       {
@@ -122206,11 +122458,29 @@
       },
       {
         "vpn": "openvpn",
+        "region": "Italy",
+        "hostname": "it1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.37"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "Japan",
         "hostname": "jp1.vyprvpn.com",
         "udp": true,
         "ips": [
           "209.99.113.18"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Japan",
+        "hostname": "jp1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.113.20"
         ]
       },
       {
@@ -122224,6 +122494,15 @@
       },
       {
         "vpn": "openvpn",
+        "region": "Latvia",
+        "hostname": "lv1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.45"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "Liechtenstein",
         "hostname": "li1.vyprvpn.com",
         "udp": true,
@@ -122233,11 +122512,38 @@
       },
       {
         "vpn": "openvpn",
+        "region": "Liechtenstein",
+        "hostname": "li1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.39"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "Lithuania",
         "hostname": "lt1.vyprvpn.com",
         "udp": true,
         "ips": [
           "128.90.96.40"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Lithuania",
+        "hostname": "lt1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.41"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Luxembourg",
+        "hostname": "lu1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.43"
         ]
       },
       {
@@ -122252,10 +122558,28 @@
       {
         "vpn": "openvpn",
         "region": "Macao",
+        "hostname": "mo1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.67.21"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Macao",
         "hostname": "mo1.vyprvpn.com",
         "udp": true,
         "ips": [
-          "128.90.227.36"
+          "209.99.67.20"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Malaysia",
+        "hostname": "my1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.1.29"
         ]
       },
       {
@@ -122278,6 +122602,15 @@
       },
       {
         "vpn": "openvpn",
+        "region": "Maldives",
+        "hostname": "mv1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.1.35"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "Marshall Islands",
         "hostname": "mh1.vyprvpn.com",
         "udp": true,
@@ -122287,11 +122620,38 @@
       },
       {
         "vpn": "openvpn",
+        "region": "Marshall Islands",
+        "hostname": "mh1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.1.34"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Mexico",
+        "hostname": "mx1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.61.23"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "Mexico",
         "hostname": "mx1.vyprvpn.com",
         "udp": true,
         "ips": [
           "209.99.61.19"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Netherlands",
+        "hostname": "eu1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.17"
         ]
       },
       {
@@ -122314,6 +122674,15 @@
       },
       {
         "vpn": "openvpn",
+        "region": "New Zealand",
+        "hostname": "nz1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.117.29"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "Norway",
         "hostname": "no1.vyprvpn.com",
         "udp": true,
@@ -122323,11 +122692,38 @@
       },
       {
         "vpn": "openvpn",
+        "region": "Norway",
+        "hostname": "no1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.47"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "Pakistan",
         "hostname": "pk1.vyprvpn.com",
         "udp": true,
         "ips": [
-          "209.99.75.23"
+          "185.29.164.28"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Pakistan",
+        "hostname": "pk1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "185.29.164.29"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Panama",
+        "hostname": "pa1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.109.41"
         ]
       },
       {
@@ -122337,6 +122733,15 @@
         "udp": true,
         "ips": [
           "209.99.109.23"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Philippines",
+        "hostname": "ph1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.1.30"
         ]
       },
       {
@@ -122359,6 +122764,15 @@
       },
       {
         "vpn": "openvpn",
+        "region": "Poland",
+        "hostname": "pl1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.49"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "Portugal",
         "hostname": "pt1.vyprvpn.com",
         "udp": true,
@@ -122368,11 +122782,38 @@
       },
       {
         "vpn": "openvpn",
+        "region": "Portugal",
+        "hostname": "pt1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.51"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Qatar",
+        "hostname": "qa1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "185.29.164.37"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "Qatar",
         "hostname": "qa1.vyprvpn.com",
         "udp": true,
         "ips": [
-          "209.99.115.21"
+          "185.29.164.36"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Romania",
+        "hostname": "ro1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.53"
         ]
       },
       {
@@ -122395,11 +122836,38 @@
       },
       {
         "vpn": "openvpn",
+        "region": "Russia",
+        "hostname": "ru1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.55"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "Saudi Arabia",
         "hostname": "sa1.vyprvpn.com",
         "udp": true,
         "ips": [
-          "209.99.115.22"
+          "185.29.164.38"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Saudi Arabia",
+        "hostname": "sa1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "185.29.164.39"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Singapore",
+        "hostname": "sg1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.1.31"
         ]
       },
       {
@@ -122414,6 +122882,15 @@
       {
         "vpn": "openvpn",
         "region": "Slovakia",
+        "hostname": "sk1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.61"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Slovakia",
         "hostname": "sk1.vyprvpn.com",
         "udp": true,
         "ips": [
@@ -122423,10 +122900,19 @@
       {
         "vpn": "openvpn",
         "region": "Slovenia",
+        "hostname": "si1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "185.29.164.17"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Slovenia",
         "hostname": "si1.vyprvpn.com",
         "udp": true,
         "ips": [
-          "128.90.96.58"
+          "185.29.164.16"
         ]
       },
       {
@@ -122440,11 +122926,38 @@
       },
       {
         "vpn": "openvpn",
+        "region": "South Korea",
+        "hostname": "kr1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.113.21"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "Spain",
         "hostname": "es1.vyprvpn.com",
         "udp": true,
         "ips": [
           "128.90.96.30"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Spain",
+        "hostname": "es1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.31"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Sweden",
+        "hostname": "se1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.57"
         ]
       },
       {
@@ -122467,11 +122980,29 @@
       },
       {
         "vpn": "openvpn",
+        "region": "Switzerland",
+        "hostname": "ch1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.60.33"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "Taiwan",
         "hostname": "tw1.vyprvpn.com",
         "udp": true,
         "ips": [
-          "128.90.227.27"
+          "209.99.67.22"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Taiwan",
+        "hostname": "tw1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.67.23"
         ]
       },
       {
@@ -122485,11 +123016,38 @@
       },
       {
         "vpn": "openvpn",
+        "region": "Thailand",
+        "hostname": "th1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.1.32"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Turkey",
+        "hostname": "tr1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.63"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "Turkey",
         "hostname": "tr1.vyprvpn.com",
         "udp": true,
         "ips": [
           "128.90.96.62"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "USA Austin",
+        "hostname": "us3.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.61.40"
         ]
       },
       {
@@ -122512,6 +123070,24 @@
       },
       {
         "vpn": "openvpn",
+        "region": "USA Chicago",
+        "hostname": "us6.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.93.33"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "USA Los Angeles",
+        "hostname": "us1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.67.37"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "USA Los Angeles",
         "hostname": "us1.vyprvpn.com",
         "udp": true,
@@ -122526,6 +123102,24 @@
         "udp": true,
         "ips": [
           "209.99.109.18"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "USA Miami",
+        "hostname": "us4.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.109.31"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "USA New York",
+        "hostname": "us5.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.63.33"
         ]
       },
       {
@@ -122548,6 +123142,24 @@
       },
       {
         "vpn": "openvpn",
+        "region": "USA San Francisco",
+        "hostname": "us7.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.95.38"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "USA Seattle",
+        "hostname": "us8.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.94.35"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "USA Seattle",
         "hostname": "us8.vyprvpn.com",
         "udp": true,
@@ -122557,11 +123169,29 @@
       },
       {
         "vpn": "openvpn",
+        "region": "USA Washington",
+        "hostname": "us2.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.61.25"
+        ]
+      },
+      {
+        "vpn": "openvpn",
         "region": "USA Washington DC",
         "hostname": "us2.vyprvpn.com",
         "udp": true,
         "ips": [
-          "209.99.62.18"
+          "209.99.61.24"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Ukraine",
+        "hostname": "ua1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "128.90.96.65"
         ]
       },
       {
@@ -122576,6 +123206,15 @@
       {
         "vpn": "openvpn",
         "region": "United Kingdom",
+        "hostname": "uk1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.22.40"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "United Kingdom",
         "hostname": "uk1.vyprvpn.com",
         "udp": true,
         "ips": [
@@ -122585,10 +123224,28 @@
       {
         "vpn": "openvpn",
         "region": "Uruguay",
+        "hostname": "uy1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.61.37"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Uruguay",
         "hostname": "uy1.vyprvpn.com",
         "udp": true,
         "ips": [
           "209.99.61.21"
+        ]
+      },
+      {
+        "vpn": "openvpn",
+        "region": "Vietnam",
+        "hostname": "vn1.vpn.giganews.com",
+        "udp": true,
+        "ips": [
+          "209.99.1.33"
         ]
       },
       {
